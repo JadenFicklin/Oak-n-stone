@@ -3,6 +3,8 @@
   height: 25vh;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 5vh;
+  border-top: 1px solid #3a3a1f9c;
 }
 
 .selected-works-left {
@@ -15,6 +17,12 @@
   font-size: 65px;
   margin-left: 30px;
   margin-top: 30px;
+  opacity: 1;
+  transition: 1.5s;
+}
+.t-false {
+  margin-top: 200px;
+  opacity: 0;
 }
 .selected-works-right {
   width: 40%;
@@ -30,6 +38,7 @@
   width: 300px;
   height: 60%;
   font-size: 15px;
+  transition: 1.5s;
 }
 .selected-works-right-bottom {
   width: 100%;
@@ -46,6 +55,7 @@
   border: 1px solid black;
   font-size: 12px;
   overflow: hidden;
+  transition: 1.5s ease-in;
 }
 .selected-works-button:hover {
   cursor: pointer;

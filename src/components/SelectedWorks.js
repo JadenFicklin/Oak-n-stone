@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "../styles/SelectedWorks.css";
+import useScrollPosition from "../hooks/useScrollPosition";
 
 function SelectedWorks() {
+  const scrollPosition = useScrollPosition();
   const [one, setOne] = useState(false);
   const [button, setButton] = useState(false);
 
@@ -9,11 +11,19 @@ function SelectedWorks() {
     setOne(true);
   }, 1600);
 
+  const spanChangeStyling = { marginTop: "30px", opacity: "100%" };
+  const spanStaticStyling = { marginTop: "60px", opacity: "0%" };
+
+  const selectedStyling =
+    scrollPosition < 1100 ? spanStaticStyling : spanChangeStyling;
+
   return (
     <>
       <div className="selected-works-outer">
         <div className="selected-works-left">
-          <div className="selected-works-left-inner">SELECTED WORKS</div>
+          <div className="selected-works-left-inner" style={selectedStyling}>
+            SELECTED WORKS
+          </div>
         </div>
         <div className="selected-works-right">
           <div className="selected-works-right-top">
