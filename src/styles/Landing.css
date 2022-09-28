@@ -3,6 +3,8 @@
   height: 85vh;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 .landing-top {
   width: 100%;
@@ -118,7 +120,7 @@
 }
 
 .landing-bottom-middle {
-  width: 20%;
+  width: 17%;
   height: 60%;
   font-size: 10px;
   opacity: 1;
@@ -138,10 +140,49 @@
   width: 100%;
   height: 100vh;
   margin-top: 6vh;
-  background-color: lightgray;
   background-image: url("../assets/images/19.jpg");
   background-size: cover;
   background-position: bottom;
   background-repeat: none;
   transition: 1s;
+  position: relative;
+}
+.landing-lines-outer {
+  width: 100%;
+  height: 91vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.landing-top-lines {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.line {
+  height: 100%;
+  width: 1px;
+  background-color: rgb(177, 177, 177);
+  transition: 0.8s;
+}
+.landing-line-one,
+.landing-line-eight {
+  background-color: transparent;
+}
+
+.landing-bottom-line {
+  width: 100%;
+  height: 1%;
+  display: flex;
+  justify-content: center;
+}
+.landing-bottom-line-inner {
+  width: 100%;
+  height: 1px;
+  background-color: black;
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/Landing.css";
 
 function Landing() {
+  // letters
   const [one, setOne] = useState(false);
   const [two, setTwo] = useState(false);
   const [three, setThree] = useState(false);
@@ -41,6 +42,15 @@ function Landing() {
   const [button, setButton] = useState(false);
 
   const [thirtyfive, setThirtyfive] = useState(false);
+
+  // lines
+  const [thirtysix, setThirtysix] = useState(false);
+  const [thirtyseven, setThirtyseven] = useState(false);
+  const [thirtyeight, setThirtyeight] = useState(false);
+  const [thirtynine, setThirtynine] = useState(false);
+  const [fourty, setFourty] = useState(false);
+  const [fourtyone, setFourtyone] = useState(false);
+  const [fourtytwo, setFourtytwo] = useState(false);
 
   setTimeout(() => {
     setOne(true);
@@ -150,6 +160,28 @@ function Landing() {
     setThirtyfive(true);
   }, 2600);
 
+  setTimeout(() => {
+    setThirtysix(true);
+  }, 0);
+  setTimeout(() => {
+    setThirtyseven(true);
+  }, 100);
+  setTimeout(() => {
+    setThirtyeight(true);
+  }, 200);
+  setTimeout(() => {
+    setThirtynine(true);
+  }, 300);
+  setTimeout(() => {
+    setFourty(true);
+  }, 400);
+  setTimeout(() => {
+    setFourtyone(true);
+  }, 500);
+  setTimeout(() => {
+    setFourtytwo(true);
+  }, 600);
+
   return (
     <>
       <div className="landing-outer">
@@ -254,6 +286,63 @@ function Landing() {
       <div
         className={thirtyfive ? "landing-span-img" : "landing-span-img opacity"}
       ></div>
+      <div className="landing-lines-outer">
+        <div className="landing-top-lines">
+          <div className="line landing-line-one"></div>
+          <div
+            className={
+              thirtysix
+                ? "line landing-line-two"
+                : "line landing-line-two false-line"
+            }
+          ></div>
+          <div
+            className={
+              thirtyseven
+                ? "line landing-line-three"
+                : "line landing-line-three false-line"
+            }
+          ></div>
+          <div
+            className={
+              thirtyeight
+                ? "line landing-line-four"
+                : "line landing-line-four false-line"
+            }
+          ></div>
+          <div
+            className={
+              thirtynine
+                ? "line landing-line-five"
+                : "line landing-line-five false-line"
+            }
+          ></div>
+          <div
+            className={
+              fourty
+                ? "line landing-line-six"
+                : "line landing-line-six false-line"
+            }
+          ></div>
+          <div
+            className={
+              fourtyone
+                ? "line landing-line-seven"
+                : "line landing-line-seven false-line"
+            }
+          ></div>
+          <div className="line landing-line-eight"></div>
+        </div>
+        <div className="landing-bottom-line">
+          <div
+            className={
+              fourtytwo
+                ? "landing-bottom-line-inner"
+                : "landing-bottom-line-inner false-line-horizontal"
+            }
+          ></div>
+        </div>
+      </div>
     </>
   );
 }
