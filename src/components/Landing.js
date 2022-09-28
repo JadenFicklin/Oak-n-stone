@@ -51,6 +51,7 @@ function Landing() {
   const [fourty, setFourty] = useState(false);
   const [fourtyone, setFourtyone] = useState(false);
   const [fourtytwo, setFourtytwo] = useState(false);
+  const [fourtythree, setFourtythree] = useState(false);
 
   setTimeout(() => {
     setOne(true);
@@ -156,31 +157,37 @@ function Landing() {
     setThirtyfour(true);
   }, 2600);
 
+  // span image
   setTimeout(() => {
     setThirtyfive(true);
-  }, 2600);
+  }, 2000);
 
+  // lines
   setTimeout(() => {
     setThirtysix(true);
-  }, 0);
+  }, 600);
   setTimeout(() => {
     setThirtyseven(true);
-  }, 100);
+  }, 400);
   setTimeout(() => {
     setThirtyeight(true);
   }, 200);
   setTimeout(() => {
     setThirtynine(true);
-  }, 300);
+  }, 0);
   setTimeout(() => {
     setFourty(true);
-  }, 400);
+  }, 200);
   setTimeout(() => {
     setFourtyone(true);
-  }, 500);
+  }, 400);
   setTimeout(() => {
     setFourtytwo(true);
   }, 600);
+  // lines false again
+  setTimeout(() => {
+    setFourtythree(true);
+  }, 1600);
 
   return (
     <>
@@ -286,6 +293,8 @@ function Landing() {
       <div
         className={thirtyfive ? "landing-span-img" : "landing-span-img opacity"}
       ></div>
+
+      {/* lines  */}
       <div className="landing-lines-outer">
         <div className="landing-top-lines">
           <div className="line landing-line-one"></div>
@@ -299,35 +308,35 @@ function Landing() {
           <div
             className={
               thirtyseven
-                ? "line landing-line-three"
+                ? "line landing-line-three true-line"
                 : "line landing-line-three false-line"
             }
           ></div>
           <div
             className={
               thirtyeight
-                ? "line landing-line-four"
+                ? "line landing-line-four true-line"
                 : "line landing-line-four false-line"
             }
           ></div>
           <div
             className={
               thirtynine
-                ? "line landing-line-five"
+                ? "line landing-line-five true-line"
                 : "line landing-line-five false-line"
             }
           ></div>
           <div
             className={
               fourty
-                ? "line landing-line-six"
+                ? "line landing-line-six true-line"
                 : "line landing-line-six false-line"
             }
           ></div>
           <div
             className={
               fourtyone
-                ? "line landing-line-seven"
+                ? "line landing-line-seven true-line"
                 : "line landing-line-seven false-line"
             }
           ></div>
@@ -337,12 +346,19 @@ function Landing() {
           <div
             className={
               fourtytwo
-                ? "landing-bottom-line-inner"
+                ? "landing-bottom-line-inner true-line-horizontal"
                 : "landing-bottom-line-inner false-line-horizontal"
             }
           ></div>
         </div>
       </div>
+      <div
+        className={
+          fourtythree
+            ? "cover-lines-after-animation"
+            : "cover-lines-after-animation opacity"
+        }
+      ></div>
     </>
   );
 }
