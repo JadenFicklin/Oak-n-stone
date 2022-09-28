@@ -38,6 +38,10 @@ function Landing() {
   const [thirtythree, setThirtythree] = useState(false);
   const [thirtyfour, setThirtyfour] = useState(false);
 
+  const [button, setButton] = useState(false);
+
+  const [thirtyfive, setThirtyfive] = useState(false);
+
   setTimeout(() => {
     setOne(true);
   }, 1600);
@@ -142,6 +146,10 @@ function Landing() {
     setThirtyfour(true);
   }, 2600);
 
+  setTimeout(() => {
+    setThirtyfive(true);
+  }, 2600);
+
   return (
     <>
       <div className="landing-outer">
@@ -209,8 +217,17 @@ function Landing() {
                     ? "landing-bottom-left-bottom-inner"
                     : "landing-bottom-left-bottom-inner opacity"
                 }
+                onMouseEnter={() => setButton(true)}
+                onMouseLeave={() => setButton(false)}
               >
-                PRODUCTS
+                <span
+                  className={button ? "products-text" : "products-text-false"}
+                >
+                  PRODUCTS
+                </span>
+                <div
+                  className={button ? "button-hover" : "button-hover-false"}
+                ></div>
               </div>
             </div>
           </div>
@@ -234,6 +251,9 @@ function Landing() {
           </div>
         </div>
       </div>
+      <div
+        className={thirtyfive ? "landing-span-img" : "landing-span-img opacity"}
+      ></div>
     </>
   );
 }

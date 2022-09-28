@@ -3,7 +3,10 @@
   height: 40px;
   position: fixed;
   top: 0px;
-  margin-top: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+  z-index: 2;
 }
 .nav-inner {
   width: 80%;

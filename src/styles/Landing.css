@@ -79,12 +79,42 @@
   height: 30px;
   border: 1px solid black;
   border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 1;
+  transition: 3s;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  opacity: 1;
-  transition: 2s;
+}
+.products-text {
+  position: absolute;
+  color: white;
+  transition: 0.3s;
+}
+.products-text-false {
+  position: absolute;
+  transition: 0.3s;
+}
+.landing-bottom-left-bottom-inner:hover {
+  cursor: pointer;
+}
+.button-hover {
+  width: 100%;
+  height: 300%;
+  background-color: #3a3a1f;
+  transition: 0.3s;
+  border-radius: 50%;
+  color: white;
+}
+.button-hover-false {
+  width: 0%;
+  height: 0%;
+  background-color: #3a3a1f;
+  transition: 0.3s;
+  border-radius: 50%;
+  color: #3a3a1f;
 }
 
 .landing-bottom-middle {
@@ -103,4 +133,15 @@
 }
 .opacity {
   opacity: 0;
+}
+.landing-span-img {
+  width: 100%;
+  height: 100vh;
+  margin-top: 6vh;
+  background-color: lightgray;
+  background-image: url("../assets/images/19.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: none;
+  transition: 1s;
 }
