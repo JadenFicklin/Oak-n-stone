@@ -70,7 +70,7 @@
   height: 100%;
   font-size: 15px;
   opacity: 1;
-  transition: 2s;
+  transition: 1s;
 }
 .landing-bottom-left-bottom {
   width: 70%;
@@ -84,7 +84,7 @@
   font-size: 11px;
   letter-spacing: 1px;
   opacity: 1;
-  transition: 2s;
+  transition: 1s;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -124,14 +124,14 @@
   height: 60%;
   font-size: 10px;
   opacity: 1;
-  transition: 2s;
+  transition: 1s;
 }
 .landing-bottom-right {
   width: 20%;
   height: 60%;
   font-size: 10px;
   opacity: 1;
-  transition: 2s;
+  transition: 1s;
 }
 .opacity {
   opacity: 0;

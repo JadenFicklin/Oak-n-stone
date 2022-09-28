@@ -9,9 +9,15 @@ function Nav() {
   const [contact, setContact] = useState(false);
   const [samples, setSamples] = useState(false);
 
+  const [nav, setNav] = useState(false);
+
+  setTimeout(() => {
+    setNav(true);
+  }, 1600);
+
   return (
     <>
-      <div className="nav-outer">
+      <div className={nav ? "nav-outer" : "nav-outer transparent"}>
         <nav className="nav-inner">
           <div className="nav-logo">
             <img
