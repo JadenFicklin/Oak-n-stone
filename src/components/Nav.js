@@ -3,11 +3,8 @@ import "../styles/Nav.css";
 
 function Nav() {
   const [projects, setProjects] = useState(false);
-  const [products, setProducts] = useState(false);
-  const [resources, setResources] = useState(false);
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
-  const [samples, setSamples] = useState(false);
 
   const [nav, setNav] = useState(false);
 
@@ -38,30 +35,7 @@ function Nav() {
               }
             ></div>
           </div>
-          <div
-            className="nav-sub"
-            onMouseEnter={() => setProducts(true)}
-            onMouseLeave={() => setProducts(false)}
-          >
-            PRODUCTS
-            <div
-              className={
-                products ? "nav-line-hover-true" : "nav-line-hover-false"
-              }
-            ></div>
-          </div>
-          <div
-            className="nav-sub"
-            onMouseEnter={() => setResources(true)}
-            onMouseLeave={() => setResources(false)}
-          >
-            RESOURCES
-            <div
-              className={
-                resources ? "nav-line-hover-true" : "nav-line-hover-false"
-              }
-            ></div>
-          </div>
+
           <div
             className="nav-sub"
             onMouseEnter={() => setAbout(true)}
@@ -81,18 +55,6 @@ function Nav() {
             <div
               className={
                 contact ? "nav-line-hover-true" : "nav-line-hover-false"
-              }
-            ></div>
-          </div>
-          <div
-            className="nav-sub"
-            onMouseEnter={() => setSamples(true)}
-            onMouseLeave={() => setSamples(false)}
-          >
-            SAMPLES
-            <div
-              className={
-                samples ? "nav-line-hover-true" : "nav-line-hover-false"
               }
             ></div>
           </div>

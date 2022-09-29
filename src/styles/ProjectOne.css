@@ -1,0 +1,136 @@
+.project-one-outer {
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-one-top {
+  width: 100%;
+  height: 1px;
+  display: flex;
+  justify-content: center;
+}
+.project-one-top-line {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.project-one-left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.project-one-left-left {
+  width: 99%;
+  height: 100%;
+}
+.project-one-left-right {
+  width: 1px;
+  height: 100%;
+  background-color: black;
+}
+.project-one-right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-one-right-inner {
+  width: 100%;
+  height: 95%;
+  margin: 20px 0px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.project-one-right-inner-image-one {
+  width: 70%;
+  height: 100%;
+  background-image: url("../assets/images/24.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: none;
+}
+.project-one-right-inner-image-two {
+  width: 28%;
+  height: 100%;
+  background-image: url("../assets/images/14.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: none;
+}
+
+.project-info-top {
+  width: 500px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.project-info-middle {
+  width: 100%;
+  height: 70%;
+}
+.header {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.mini-header {
+  font-size: 14px;
+}
+.sub-header {
+  font-size: 26px;
+}
+.left-button,
+.right-button {
+  font-size: 14px;
+}
+
+.project-info-bottom {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-info-bottom-top {
+  width: 500px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.project-info-bottom-bottom {
+  width: 500px;
+  height: 50px;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-info-bottom-bottom-top {
+  width: 100%;
+  height: 50%;
+}
+.project-info-bottom-bottom-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-button,
+.right-button {
+  width: 60px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-button {
+  margin-left: 10px;
+}
+.right-button:hover,
+.left-button:hover {
+  cursor: pointer;
+}

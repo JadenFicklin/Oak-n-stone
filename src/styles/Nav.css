@@ -11,11 +11,11 @@
   transition: 1s;
 }
 .nav-inner {
-  width: 80%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 .nav-logo {
   width: 150px;
@@ -25,6 +25,7 @@
   justify-content: center;
 }
 .nav-sub {
+  margin-top: 5px;
   height: 50%;
   display: flex;
   align-items: center;
