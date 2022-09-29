@@ -28,9 +28,9 @@ function SelectedWorks() {
         <div className="selected-works-right">
           <div className="selected-works-right-top">
             <div className="selected-works-right-top-inner">
-              Our inspired solutions have helped shape modern acoustic design.
-              Alluring spaces, internationally recognised for their
-              architectural elegance and exceptional sound management live here.
+              We are family-owned and operated. Rod and Nate specialize in
+              custom woodwork, remodel and finish work. We design and build
+              custom kitchens and baths and other custom woodwork
             </div>
           </div>
           <div className="selected-works-right-bottom">

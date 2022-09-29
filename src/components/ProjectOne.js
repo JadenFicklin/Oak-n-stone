@@ -48,8 +48,8 @@ function ProjectOne() {
             <div className="project-info-middle"></div>
             <div className="project-info-bottom">
               <div className="project-info-bottom-top">
-                <div className="header">CATEGORY</div>
-                <div className="mini-header">Arts and Community</div>
+                <div className="header"></div>
+                <div className="mini-header"></div>
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">

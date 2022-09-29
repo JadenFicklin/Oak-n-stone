@@ -18,7 +18,7 @@ function Nav() {
         <nav className="nav-inner">
           <div className="nav-logo">
             <img
-              src={require("../assets/logos/n.JPG")}
+              src={require("../assets/logos/logo.JPG")}
               alt="logo"
               className="nav-logo-inner"
             />
