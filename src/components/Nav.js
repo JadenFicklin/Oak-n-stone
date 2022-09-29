@@ -12,6 +12,14 @@ function Nav() {
     setNav(true);
   }, 1600);
 
+  const changeScroll = (position) => {
+    window.scrollTo(0, position);
+  };
+
+  const handleLogoClick = () => {
+    changeScroll(0);
+  };
+
   return (
     <>
       <div className={nav ? "nav-outer" : "nav-outer transparent"}>
@@ -21,6 +29,7 @@ function Nav() {
               src={require("../assets/logos/logo.JPG")}
               alt="logo"
               className="nav-logo-inner"
+              onClick={handleLogoClick}
             />
           </div>
           <div

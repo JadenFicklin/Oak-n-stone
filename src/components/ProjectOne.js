@@ -17,20 +17,43 @@ function ProjectOne() {
     }
   };
 
-  const leftOne = { left: "0%" };
-  const leftTwo = { left: "-80%" };
-  const leftThree = { left: "-160%" };
-  const leftFour = { left: "-240%" };
+  // const leftOne = { left: "0%" };
+  // const leftTwo = { left: "-80%" };
+  // const leftThree = { left: "-160%" };
+  // const leftFour = { left: "-240%" };
 
-  if (number === 1) {
-    var handleMarginLeft = leftOne;
-  } else if (number === 2) {
-    var handleMarginLeft = leftTwo;
-  } else if (number === 3) {
-    var handleMarginLeft = leftThree;
-  } else {
-    var handleMarginLeft = leftFour;
-  }
+  // let handleMarginLeft = { left: "0%" };
+
+  // if (number === 1) {
+  //   handleMarginLeft = leftOne;
+  // } else if (number === 2) {
+  //   handleMarginLeft = leftTwo;
+  // } else if (number === 3) {
+  //   handleMarginLeft = leftThree;
+  // } else {
+  //   handleMarginLeft = leftFour;
+  // }
+
+  // --------------------- OBJECT
+
+  // const margins = {
+  //   1: 0,
+  //   2: 80,
+  //   3: 160,
+  //   4: 240,
+  // };
+
+  // const handleMarginLeft = { left: `-${margins[number]}%` };
+
+  // ------------------- ARRAY
+
+  // const margins = [0, 80, 160, 240];
+  // const handleMarginLeft = { left: `-${margins[number - 1]}%` };
+
+  // --------------------- PROGRAMATIC
+
+  const leftMargin = number * 80 - 80;
+  const handleMarginLeft = { left: `-${leftMargin}%` };
 
   return (
     <>
