@@ -195,42 +195,42 @@ function Landing() {
         <div className="landing-top">
           <div className="landing-top-inner">
             <div className="landing-top-one">
-              <span className={one ? "l l-true" : "l l-false"}>A</span>
-              <span className={two ? "l l-true" : "l l-false"}>R</span>
-              <span className={three ? "l l-true" : "l l-false"}>C</span>
-              <span className={four ? "l l-true" : "l l-false"}>H</span>
-              <span className={five ? "l l-true" : "l l-false"}>I</span>
-              <span className={six ? "l l-true" : "l l-false"}>T</span>
-              <span className={seven ? "l l-true" : "l l-false"}>E</span>
-              <span className={eight ? "l l-true" : "l l-false"}>C</span>
-              <span className={nine ? "l l-true" : "l l-false"}>T</span>
-              <span className={ten ? "l l-true" : "l l-false"}>U</span>
-              <span className={eleven ? "l l-true" : "l l-false"}>R</span>
-              <span className={twelve ? "l l-true" : "l l-false"}>A</span>
-              <span className={thirteen ? "l l-true" : "l l-false"}>L</span>
+              <span className={one ? "l l-true" : "l l-false"}>O</span>
+              <span className={two ? "l l-true" : "l l-false"}>A</span>
+              <span className={three ? "l l-true space" : "l l-false space"}>
+                K
+              </span>
+              <span className={four ? "l l-true" : "l l-false"}>A</span>
+              <span className={five ? "l l-true" : "l l-false"}>N</span>
+              <span className={six ? "l l-true space" : "l l-false space"}>
+                D
+              </span>
+              <span className={seven ? "l l-true" : "l l-false"}>S</span>
+              <span className={eight ? "l l-true" : "l l-false"}>T</span>
+              <span className={nine ? "l l-true" : "l l-false"}>O</span>
+              <span className={ten ? "l l-true" : "l l-false"}>N</span>
+              <span className={eleven ? "l l-true" : "l l-false"}>E</span>
             </div>
             <div className="landing-top-two">
-              <span className={fourteen ? "l l-true" : "l l-false"}>A</span>
-              <span className={fifteen ? "l l-true" : "l l-false"}>C</span>
-              <span className={sixteen ? "l l-true" : "l l-false"}>O</span>
-              <span className={seventeen ? "l l-true" : "l l-false"}>U</span>
-              <span className={eighteen ? "l l-true" : "l l-false"}>S</span>
-              <span className={nineteen ? "l l-true" : "l l-false"}>T</span>
-              <span className={twenty ? "l l-true" : "l l-false"}>I</span>
-              <span
-                className={twentyone ? "l l-true space" : "l l-false space"}
-              >
-                C
+              <span className={fourteen ? "l l-true" : "l l-false"}>C</span>
+              <span className={fifteen ? "l l-true" : "l l-false"}>U</span>
+              <span className={sixteen ? "l l-true" : "l l-false"}>S</span>
+              <span className={seventeen ? "l l-true" : "l l-false"}>T</span>
+              <span className={eighteen ? "l l-true" : "l l-false"}>O</span>
+              <span className={nineteen ? "l l-true space" : "l l-false space"}>
+                M
               </span>
-              <span className={twentytwo ? "l l-true" : "l l-false"}>S</span>
-              <span className={twentythree ? "l l-true" : "l l-false"}>O</span>
-              <span className={twentyfour ? "l l-true" : "l l-false"}>L</span>
-              <span className={twentyfive ? "l l-true" : "l l-false"}>U</span>
+              <span className={twenty ? "l l-true" : "l l-false"}>C</span>
+              <span className={twentyone ? "l l-true" : "l l-false"}>A</span>
+              <span className={twentytwo ? "l l-true" : "l l-false"}>B</span>
+              <span className={twentythree ? "l l-true" : "l l-false"}>I</span>
+              <span className={twentyfour ? "l l-true" : "l l-false"}>N</span>
+              <span className={twentyfive ? "l l-true" : "l l-false"}>E</span>
               <span className={twentysix ? "l l-true" : "l l-false"}>T</span>
-              <span className={twentyseven ? "l l-true" : "l l-false"}>I</span>
-              <span className={twentyeight ? "l l-true" : "l l-false"}>O</span>
-              <span className={twentynine ? "l l-true" : "l l-false"}>N</span>
-              <span className={thirty ? "l l-true" : "l l-false"}>S</span>
+              <span className={twentyseven ? "l l-true" : "l l-false"}>R</span>
+              <span className={twentyeight ? "l l-true" : "l l-false"}>Y</span>
+              {/* <span className={twentynine ? "l l-true" : "l l-false"}>N</span> */}
+              {/* <span className={thirty ? "l l-true" : "l l-false"}>S</span> */}
             </div>
           </div>
         </div>
@@ -244,9 +244,8 @@ function Landing() {
                     : "landing-bottom-left-top-inner opacity"
                 }
               >
-                <span className="space"></span>
-                We help architects sculpt sound out of space, with bespoke,
-                acoustic solutions.
+                {/* <span className="space"></span> */}
+                We focus on making dream kitchens become reality
               </div>
             </div>
             <div className="landing-bottom-left-bottom">
@@ -262,7 +261,7 @@ function Landing() {
                 <span
                   className={button ? "products-text" : "products-text-false"}
                 >
-                  PRODUCTS
+                  CONTACT
                 </span>
                 <div
                   className={button ? "button-hover" : "button-hover-false"}
@@ -277,7 +276,7 @@ function Landing() {
                 : "landing-bottom-middle opacity"
             }
           >
-            BUILT TO SPEC
+            AN EXPERIENCED TEAM YOU CAN TRUST
           </div>
           <div
             className={
@@ -286,7 +285,7 @@ function Landing() {
                 : "landing-bottom-right opacity"
             }
           >
-            INDIGENOUS OWNED SINCE. 1972
+            35+ YEARS OF EXPERIENCE
           </div>
         </div>
       </div>

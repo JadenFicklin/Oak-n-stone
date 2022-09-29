@@ -1,7 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/ProjectOne.css";
 
 function ProjectOne() {
+  const [number, setNumber] = useState(1);
+
+  const handleLeftClick = () => {
+    setNumber(number - 1);
+    if (number <= 1) {
+      setNumber(1);
+    }
+  };
+  const handleRightClick = () => {
+    setNumber(number + 1);
+    if (number >= 4) {
+      setNumber(4);
+    }
+  };
+
+  const leftOne = { left: "0%" };
+  const leftTwo = { left: "-80%" };
+  const leftThree = { left: "-160%" };
+  const leftFour = { left: "-240%" };
+
+  if (number === 1) {
+    var handleMarginLeft = leftOne;
+  } else if (number === 2) {
+    var handleMarginLeft = leftTwo;
+  } else if (number === 3) {
+    var handleMarginLeft = leftThree;
+  } else {
+    var handleMarginLeft = leftFour;
+  }
+
   return (
     <>
       {/* part one */}
@@ -13,7 +43,7 @@ function ProjectOne() {
           <div className="project-one-left-left">
             <div className="project-info-top">
               <div className="header">PROJECT</div>
-              <div className="sub-header">Eromanga Natural History Museum</div>
+              <div className="sub-header">Custom Cabinets</div>
             </div>
             <div className="project-info-middle"></div>
             <div className="project-info-bottom">
@@ -23,11 +53,15 @@ function ProjectOne() {
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">
-                  <div className="header">IMAGES 1/4</div>
+                  <div className="header">IMAGES {number}/4</div>
                 </div>
                 <div className="project-info-bottom-bottom-bottom">
-                  <div className="left-button">left</div>
-                  <div className="right-button">right</div>
+                  <div className="left-button" onClick={handleLeftClick}>
+                    left
+                  </div>
+                  <div className="right-button" onClick={handleRightClick}>
+                    right
+                  </div>
                 </div>
               </div>
             </div>
@@ -35,7 +69,7 @@ function ProjectOne() {
           <div className="project-one-left-right"></div>
         </div>
         <div className="project-one-right">
-          <div className="project-one-right-inner">
+          <div className="project-one-right-inner" style={handleMarginLeft}>
             <div className="project-one-right-inner-image-one image"></div>
             <div className="project-one-right-inner-image-two image"></div>
             <div className="project-one-right-inner-image-three image"></div>
@@ -53,7 +87,7 @@ function ProjectOne() {
           <div className="project-one-left-left">
             <div className="project-info-top">
               <div className="header">PROJECT</div>
-              <div className="sub-header">Eromanga Natural History Museum</div>
+              <div className="sub-header">Kitchen Remodels</div>
             </div>
             <div className="project-info-middle"></div>
             <div className="project-info-bottom">
@@ -91,7 +125,7 @@ function ProjectOne() {
           <div className="project-one-left-left">
             <div className="project-info-top">
               <div className="header">PROJECT</div>
-              <div className="sub-header">Eromanga Natural History Museum</div>
+              <div className="sub-header">Bathroom Remodels</div>
             </div>
             <div className="project-info-middle"></div>
             <div className="project-info-bottom">
