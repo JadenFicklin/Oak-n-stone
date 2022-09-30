@@ -95,6 +95,10 @@ function ProjectOne() {
   return (
     <>
       {/* part one */}
+      {/* part one */}
+      {/* part one */}
+      {/* part one */}
+      {/* part one */}
       <div className="project-one-outer">
         <div className="project-one-top">
           <div
@@ -180,26 +184,36 @@ function ProjectOne() {
         </div>
         <div className="project-one-right">
           <div className="project-one-right-inner" style={handleMarginLeft}>
-            <div className="project-one-right-inner-image-one image">
+            <div className="project-one-right-inner-image image img-one">
               <div
                 className={imageOne ? "image-cover" : "image-cover-false"}
               ></div>
             </div>
-            <div className="project-one-right-inner-image-two image">
+            <div className="project-one-right-inner-image image img-two">
               <div
                 className={imageTwo ? "image-cover" : "image-cover-false-delay"}
               ></div>
             </div>
-            <div className="project-one-right-inner-image-three image"></div>
-            <div className="project-one-right-inner-image-four image"></div>
+            <div className="project-one-right-inner-image image img-three"></div>
+            <div className="project-one-right-inner-image image img-four"></div>
           </div>
         </div>
       </div>
 
       {/* part two */}
+      {/* part two */}
+      {/* part two */}
+      {/* part two */}
+      {/* part two */}
       <div className="project-one-outer">
         <div className="project-one-top">
-          <div className="project-one-top-line"></div>
+          <div
+            className={
+              lineOne
+                ? "project-one-top-line"
+                : "project-one-top-line h-line-false"
+            }
+          ></div>
         </div>
         <div className="project-one-left">
           <div className="project-one-left-left">
@@ -210,34 +224,102 @@ function ProjectOne() {
             <div className="project-info-middle"></div>
             <div className="project-info-bottom">
               <div className="project-info-bottom-top">
-                <div className="header">CATEGORY</div>
-                <div className="mini-header">Arts and Community</div>
+                <div className="header"></div>
+                <div className="mini-header"></div>
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">
-                  <div className="header">IMAGES 1/4</div>
+                  <div className="header">IMAGES {number}/4</div>
                 </div>
                 <div className="project-info-bottom-bottom-bottom">
-                  <div>left</div>
-                  <div>right</div>
+                  <div
+                    className={
+                      buttonLeft ? "left-button-hovered" : "left-button"
+                    }
+                    onClick={handleLeftClick}
+                    onMouseEnter={() => setButtonLeft(true)}
+                    onMouseLeave={() => setButtonLeft(false)}
+                    style={handleLeftButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonLeft ? "products-text" : "products-text-false"
+                      }
+                    >
+                      left
+                    </span>
+                    <div
+                      className={
+                        buttonLeft ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
+                  <div
+                    className={
+                      buttonRight ? "right-button-hovered" : "right-button"
+                    }
+                    onClick={handleRightClick}
+                    onMouseEnter={() => setButtonRight(true)}
+                    onMouseLeave={() => setButtonRight(false)}
+                    style={handleRightButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonRight ? "products-text" : "products-text-false"
+                      }
+                    >
+                      right
+                    </span>
+                    <div
+                      className={
+                        buttonRight ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="project-one-left-right"></div>
+          <div
+            className={
+              lineTwo
+                ? "project-one-left-right"
+                : "project-one-left-right v-line-false"
+            }
+          ></div>
         </div>
         <div className="project-one-right">
-          <div className="project-one-right-inner">
-            {/* <div className="project-one-right-inner-image-one"></div> */}
-            {/* <div className="project-one-right-inner-image-two"></div> */}
+          <div className="project-one-right-inner" style={handleMarginLeft}>
+            <div className="project-one-right-inner-image image img-five">
+              <div
+                className={imageOne ? "image-cover" : "image-cover-false"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-six">
+              <div
+                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-seven"></div>
+            <div className="project-one-right-inner-image image img-eight"></div>
           </div>
         </div>
       </div>
 
       {/* part three */}
+      {/* part three */}
+      {/* part three */}
+      {/* part three */}
+      {/* part three */}
       <div className="project-one-outer">
         <div className="project-one-top">
-          <div className="project-one-top-line"></div>
+          <div
+            className={
+              lineOne
+                ? "project-one-top-line"
+                : "project-one-top-line h-line-false"
+            }
+          ></div>
         </div>
         <div className="project-one-left">
           <div className="project-one-left-left">
@@ -248,26 +330,294 @@ function ProjectOne() {
             <div className="project-info-middle"></div>
             <div className="project-info-bottom">
               <div className="project-info-bottom-top">
-                <div className="header">CATEGORY</div>
-                <div className="mini-header">Arts and Community</div>
+                <div className="header"></div>
+                <div className="mini-header"></div>
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">
-                  <div className="header">IMAGES 1/4</div>
+                  <div className="header">IMAGES {number}/4</div>
                 </div>
                 <div className="project-info-bottom-bottom-bottom">
-                  <div className="left-button">left</div>
-                  <div className="right-button">right</div>
+                  <div
+                    className={
+                      buttonLeft ? "left-button-hovered" : "left-button"
+                    }
+                    onClick={handleLeftClick}
+                    onMouseEnter={() => setButtonLeft(true)}
+                    onMouseLeave={() => setButtonLeft(false)}
+                    style={handleLeftButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonLeft ? "products-text" : "products-text-false"
+                      }
+                    >
+                      left
+                    </span>
+                    <div
+                      className={
+                        buttonLeft ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
+                  <div
+                    className={
+                      buttonRight ? "right-button-hovered" : "right-button"
+                    }
+                    onClick={handleRightClick}
+                    onMouseEnter={() => setButtonRight(true)}
+                    onMouseLeave={() => setButtonRight(false)}
+                    style={handleRightButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonRight ? "products-text" : "products-text-false"
+                      }
+                    >
+                      right
+                    </span>
+                    <div
+                      className={
+                        buttonRight ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="project-one-left-right"></div>
+          <div
+            className={
+              lineTwo
+                ? "project-one-left-right"
+                : "project-one-left-right v-line-false"
+            }
+          ></div>
         </div>
         <div className="project-one-right">
-          <div className="project-one-right-inner">
-            {/* <div className="project-one-right-inner-image-one"></div> */}
-            {/* <div className="project-one-right-inner-image-two"></div> */}
+          <div className="project-one-right-inner" style={handleMarginLeft}>
+            <div className="project-one-right-inner-image image img-nine">
+              <div
+                className={imageOne ? "image-cover" : "image-cover-false"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-ten">
+              <div
+                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-eleven"></div>
+            <div className="project-one-right-inner-image image img-twelve"></div>
+          </div>
+        </div>
+      </div>
+      {/* part four */}
+      {/* part four */}
+      {/* part four */}
+      {/* part four */}
+      {/* part four */}
+      <div className="project-one-outer">
+        <div className="project-one-top">
+          <div
+            className={
+              lineOne
+                ? "project-one-top-line"
+                : "project-one-top-line h-line-false"
+            }
+          ></div>
+        </div>
+        <div className="project-one-left">
+          <div className="project-one-left-left">
+            <div className="project-info-top">
+              <div className="header">PROJECT</div>
+              <div className="sub-header">Custom Woodwork</div>
+            </div>
+            <div className="project-info-middle"></div>
+            <div className="project-info-bottom">
+              <div className="project-info-bottom-top">
+                <div className="header"></div>
+                <div className="mini-header"></div>
+              </div>
+              <div className="project-info-bottom-bottom">
+                <div className="project-info-bottom-bottom-top">
+                  <div className="header">IMAGES {number}/4</div>
+                </div>
+                <div className="project-info-bottom-bottom-bottom">
+                  <div
+                    className={
+                      buttonLeft ? "left-button-hovered" : "left-button"
+                    }
+                    onClick={handleLeftClick}
+                    onMouseEnter={() => setButtonLeft(true)}
+                    onMouseLeave={() => setButtonLeft(false)}
+                    style={handleLeftButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonLeft ? "products-text" : "products-text-false"
+                      }
+                    >
+                      left
+                    </span>
+                    <div
+                      className={
+                        buttonLeft ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
+                  <div
+                    className={
+                      buttonRight ? "right-button-hovered" : "right-button"
+                    }
+                    onClick={handleRightClick}
+                    onMouseEnter={() => setButtonRight(true)}
+                    onMouseLeave={() => setButtonRight(false)}
+                    style={handleRightButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonRight ? "products-text" : "products-text-false"
+                      }
+                    >
+                      right
+                    </span>
+                    <div
+                      className={
+                        buttonRight ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={
+              lineTwo
+                ? "project-one-left-right"
+                : "project-one-left-right v-line-false"
+            }
+          ></div>
+        </div>
+        <div className="project-one-right">
+          <div className="project-one-right-inner" style={handleMarginLeft}>
+            <div className="project-one-right-inner-image image img-thirteen">
+              <div
+                className={imageOne ? "image-cover" : "image-cover-false"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-fourteen">
+              <div
+                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-fifteen"></div>
+            <div className="project-one-right-inner-image image img-sixteen"></div>
+          </div>
+        </div>
+      </div>
+      {/* part five */}
+      {/* part five */}
+      {/* part five */}
+      {/* part five */}
+      {/* part five */}
+      <div className="project-one-outer">
+        <div className="project-one-top">
+          <div
+            className={
+              lineOne
+                ? "project-one-top-line"
+                : "project-one-top-line h-line-false"
+            }
+          ></div>
+        </div>
+        <div className="project-one-left">
+          <div className="project-one-left-left">
+            <div className="project-info-top">
+              <div className="header">PROJECT</div>
+              <div className="sub-header">Other Projects</div>
+            </div>
+            <div className="project-info-middle"></div>
+            <div className="project-info-bottom">
+              <div className="project-info-bottom-top">
+                <div className="header"></div>
+                <div className="mini-header"></div>
+              </div>
+              <div className="project-info-bottom-bottom">
+                <div className="project-info-bottom-bottom-top">
+                  <div className="header">IMAGES {number}/4</div>
+                </div>
+                <div className="project-info-bottom-bottom-bottom">
+                  <div
+                    className={
+                      buttonLeft ? "left-button-hovered" : "left-button"
+                    }
+                    onClick={handleLeftClick}
+                    onMouseEnter={() => setButtonLeft(true)}
+                    onMouseLeave={() => setButtonLeft(false)}
+                    style={handleLeftButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonLeft ? "products-text" : "products-text-false"
+                      }
+                    >
+                      left
+                    </span>
+                    <div
+                      className={
+                        buttonLeft ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
+                  <div
+                    className={
+                      buttonRight ? "right-button-hovered" : "right-button"
+                    }
+                    onClick={handleRightClick}
+                    onMouseEnter={() => setButtonRight(true)}
+                    onMouseLeave={() => setButtonRight(false)}
+                    style={handleRightButtonStyling}
+                  >
+                    <span
+                      className={
+                        buttonRight ? "products-text" : "products-text-false"
+                      }
+                    >
+                      right
+                    </span>
+                    <div
+                      className={
+                        buttonRight ? "button-hover" : "button-hover-false"
+                      }
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className={
+              lineTwo
+                ? "project-one-left-right"
+                : "project-one-left-right v-line-false"
+            }
+          ></div>
+        </div>
+        <div className="project-one-right">
+          <div className="project-one-right-inner" style={handleMarginLeft}>
+            <div className="project-one-right-inner-image image img-seventeen">
+              <div
+                className={imageOne ? "image-cover" : "image-cover-false"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-eighteen">
+              <div
+                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+              ></div>
+            </div>
+            <div className="project-one-right-inner-image image img-nineteen"></div>
+            <div className="project-one-right-inner-image image img-twenty"></div>
           </div>
         </div>
       </div>

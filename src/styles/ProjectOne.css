@@ -87,50 +87,78 @@
 .image {
   margin: 0px 10px;
 }
-.project-one-right-inner-image-one {
+.project-one-right-inner-image {
   width: 40%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  transition: 0.8s;
+  display: flex;
+  align-items: flex-end;
+}
+
+.img-one {
   background-image: url("../assets/images/6.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: none;
-  transition: 0.8s;
-  display: flex;
-  align-items: flex-end;
 }
-.project-one-right-inner-image-two {
-  width: 40%;
-  height: 100%;
+.img-two {
   background-image: url("../assets/images/4.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: none;
-  transition: 0.8s;
-  display: flex;
-  align-items: flex-end;
 }
-.project-one-right-inner-image-three {
-  width: 40%;
-  height: 100%;
+.img-three {
   background-image: url("../assets/images/7.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: none;
-  transition: 0.8s;
-  display: flex;
-  align-items: flex-end;
 }
-.project-one-right-inner-image-four {
-  width: 34%;
-  height: 100%;
+.img-four {
   background-image: url("../assets/images/21.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: none;
-  transition: 0.8s;
-  display: flex;
-  align-items: flex-end;
 }
+.img-five {
+  background-image: url("../assets/images/3.jpg");
+}
+.img-six {
+  background-image: url("../assets/images/33.jpg");
+}
+.img-seven {
+  background-image: url("../assets/images/4.jpg");
+}
+.img-eight {
+  background-image: url("../assets/images/6.jpg");
+}
+.img-nine {
+  background-image: url("../assets/images/30.jpg");
+}
+.img-ten {
+  background-image: url("../assets/images/25.jpg");
+}
+.img-eleven {
+  background-image: url("../assets/images/10.jpg");
+}
+.img-twelve {
+  background-image: url("../assets/images/23.jpg");
+}
+.img-thirteen {
+  background-image: url("../assets/images/9.jpg");
+}
+.img-fourteen {
+  background-image: url("../assets/images/17.jpg");
+}
+.img-fifteen {
+  background-image: url("../assets/images/13.jpg");
+}
+.img-sixteen {
+  background-image: url("../assets/images/12.jpg");
+}
+.img-seventeen {
+  background-image: url("../assets/images/19.jpg");
+}
+.img-eighteen {
+  background-image: url("../assets/images/26.jpg");
+}
+.img-nineteen {
+  background-image: url("../assets/images/27.jpg");
+}
+.img-twenty {
+  background-image: url("../assets/images/15.jpg");
+}
+
 .image-cover {
   width: 100%;
   height: 100%;
