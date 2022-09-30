@@ -16,8 +16,25 @@ function ProjectOne() {
 
   const [lineOne, setLineOne] = useState(false);
   const [lineTwo, setLineTwo] = useState(false);
+  const [lineOneTwo, setLineOneTwo] = useState(false);
+  const [lineTwoTwo, setLineTwoTwo] = useState(false);
+  const [lineOneThree, setLineOneThree] = useState(false);
+  const [lineTwoThree, setLineTwoThree] = useState(false);
+  const [lineOneFour, setLineOneFour] = useState(false);
+  const [lineTwoFour, setLineTwoFour] = useState(false);
+  const [lineOneFive, setLineOneFive] = useState(false);
+  const [lineTwoFive, setLineTwoFive] = useState(false);
+
   const [imageOne, setImageOne] = useState(true);
   const [imageTwo, setImageTwo] = useState(true);
+  const [imageOneTwo, setImageOneTwo] = useState(true);
+  const [imageTwoTwo, setImageTwoTwo] = useState(true);
+  const [imageOneThree, setImageOneThree] = useState(true);
+  const [imageTwoThree, setImageTwoThree] = useState(true);
+  const [imageOneFour, setImageOneFour] = useState(true);
+  const [imageTwoFour, setImageTwoFour] = useState(true);
+  const [imageOneFive, setImageOneFive] = useState(true);
+  const [imageTwoFive, setImageTwoFive] = useState(true);
 
   const [buttonLeft, setButtonLeft] = useState(false);
   const [buttonLeftTwo, setButtonLeftTwo] = useState(false);
@@ -118,19 +135,79 @@ function ProjectOne() {
   };
 
   useEffect(() => {
+    // one
     if (scrollPosition >= 1300) {
       setLineOne(true);
     }
     if (scrollPosition >= 1300) {
       setLineTwo(true);
     }
+    // two
+    if (scrollPosition >= 2050) {
+      setLineOneTwo(true);
+    }
+    if (scrollPosition >= 2050) {
+      setLineTwoTwo(true);
+    }
+    // Three
+    if (scrollPosition >= 2850) {
+      setLineOneThree(true);
+    }
+    if (scrollPosition >= 2850) {
+      setLineTwoThree(true);
+    }
+    // Four
+    if (scrollPosition >= 3650) {
+      setLineOneFour(true);
+    }
+    if (scrollPosition >= 3650) {
+      setLineTwoFour(true);
+    }
+    // Five
+    if (scrollPosition >= 4450) {
+      setLineOneFive(true);
+    }
+    if (scrollPosition >= 4450) {
+      setLineTwoFive(true);
+    }
+
+    // image one
     if (scrollPosition >= 1300) {
       setImageOne(false);
     }
     if (scrollPosition >= 1300) {
       setImageTwo(false);
     }
+    // image Two
+    if (scrollPosition >= 2050) {
+      setImageOneTwo(false);
+    }
+    if (scrollPosition >= 2050) {
+      setImageTwoTwo(false);
+    }
+    // image Three
+    if (scrollPosition >= 2850) {
+      setImageOneThree(false);
+    }
+    if (scrollPosition >= 2850) {
+      setImageTwoThree(false);
+    }
+    // image Four
+    if (scrollPosition >= 3650) {
+      setImageOneFour(false);
+    }
+    if (scrollPosition >= 3650) {
+      setImageTwoFour(false);
+    }
+    // image Five
+    if (scrollPosition >= 4450) {
+      setImageOneFive(false);
+    }
+    if (scrollPosition >= 4450) {
+      setImageTwoFive(false);
+    }
   }, [scrollPosition]);
+  console.log(scrollPosition);
 
   const opacity = { opacity: "50%" };
   const noOpacity = { opacity: "100%" };
@@ -150,7 +227,7 @@ function ProjectOne() {
   const handleRightButtonStylingFive = numberFive === 4 ? opacity : noOpacity;
 
   // const leftOne = { left: "0%" };
-  // const leftTwo = { left: "-80%" };
+  // const leftTwo = { left: "-80%" };-
   // const leftThree = { left: "-160%" };
   // const leftFour = { left: "-240%" };
 
@@ -312,7 +389,7 @@ function ProjectOne() {
         <div className="project-one-top">
           <div
             className={
-              lineOne
+              lineOneTwo
                 ? "project-one-top-line"
                 : "project-one-top-line h-line-false"
             }
@@ -385,7 +462,7 @@ function ProjectOne() {
           </div>
           <div
             className={
-              lineTwo
+              lineTwoTwo
                 ? "project-one-left-right"
                 : "project-one-left-right v-line-false"
             }
@@ -395,12 +472,14 @@ function ProjectOne() {
           <div className="project-one-right-inner" style={handleMarginLeftTwo}>
             <div className="project-one-right-inner-image image img-five">
               <div
-                className={imageOne ? "image-cover" : "image-cover-false"}
+                className={imageOneTwo ? "image-cover" : "image-cover-false"}
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-six">
               <div
-                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+                className={
+                  imageTwoTwo ? "image-cover" : "image-cover-false-delay"
+                }
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-seven"></div>
@@ -418,7 +497,7 @@ function ProjectOne() {
         <div className="project-one-top">
           <div
             className={
-              lineOne
+              lineOneThree
                 ? "project-one-top-line"
                 : "project-one-top-line h-line-false"
             }
@@ -495,7 +574,7 @@ function ProjectOne() {
           </div>
           <div
             className={
-              lineTwo
+              lineTwoThree
                 ? "project-one-left-right"
                 : "project-one-left-right v-line-false"
             }
@@ -508,12 +587,14 @@ function ProjectOne() {
           >
             <div className="project-one-right-inner-image image img-nine">
               <div
-                className={imageOne ? "image-cover" : "image-cover-false"}
+                className={imageOneThree ? "image-cover" : "image-cover-false"}
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-ten">
               <div
-                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+                className={
+                  imageTwoThree ? "image-cover" : "image-cover-false-delay"
+                }
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-eleven"></div>
@@ -530,7 +611,7 @@ function ProjectOne() {
         <div className="project-one-top">
           <div
             className={
-              lineOne
+              lineOneFour
                 ? "project-one-top-line"
                 : "project-one-top-line h-line-false"
             }
@@ -605,7 +686,7 @@ function ProjectOne() {
           </div>
           <div
             className={
-              lineTwo
+              lineTwoFour
                 ? "project-one-left-right"
                 : "project-one-left-right v-line-false"
             }
@@ -615,12 +696,14 @@ function ProjectOne() {
           <div className="project-one-right-inner" style={handleMarginLeftFour}>
             <div className="project-one-right-inner-image image img-thirteen">
               <div
-                className={imageOne ? "image-cover" : "image-cover-false"}
+                className={imageOneFour ? "image-cover" : "image-cover-false"}
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-fourteen">
               <div
-                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+                className={
+                  imageTwoFour ? "image-cover" : "image-cover-false-delay"
+                }
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-fifteen"></div>
@@ -637,7 +720,7 @@ function ProjectOne() {
         <div className="project-one-top">
           <div
             className={
-              lineOne
+              lineOneFive
                 ? "project-one-top-line"
                 : "project-one-top-line h-line-false"
             }
@@ -712,7 +795,7 @@ function ProjectOne() {
           </div>
           <div
             className={
-              lineTwo
+              lineTwoFive
                 ? "project-one-left-right"
                 : "project-one-left-right v-line-false"
             }
@@ -722,12 +805,14 @@ function ProjectOne() {
           <div className="project-one-right-inner" style={handleMarginLeftFive}>
             <div className="project-one-right-inner-image image img-seventeen">
               <div
-                className={imageOne ? "image-cover" : "image-cover-false"}
+                className={imageOneFive ? "image-cover" : "image-cover-false"}
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-eighteen">
               <div
-                className={imageTwo ? "image-cover" : "image-cover-false-delay"}
+                className={
+                  imageTwoFive ? "image-cover" : "image-cover-false-delay"
+                }
               ></div>
             </div>
             <div className="project-one-right-inner-image image img-nineteen"></div>
