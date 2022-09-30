@@ -22,6 +22,7 @@ function Landing() {
   const [fourtytwo, setFourtytwo] = useState(false);
   const [fourtythree, setFourtythree] = useState(false);
 
+  // sub landing fade in
   setTimeout(() => {
     setThirtyone(true);
   }, 2300);
@@ -62,7 +63,7 @@ function Landing() {
   setTimeout(() => {
     setFourtytwo(true);
   }, 600);
-  // lines false again
+
   setTimeout(() => {
     setFourtythree(true);
   }, 1600);

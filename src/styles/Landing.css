@@ -103,7 +103,7 @@
   cursor: pointer;
 }
 .button-hover {
-  width: 100%;
+  width: 110%;
   height: 300%;
   background-color: #3a3a1f;
   transition: 0.3s;

@@ -18,6 +18,7 @@
   position: relative;
   text-transform: uppercase;
   font-size: 160px;
+  white-space: pre-wrap;
 }
 
 .project-one-outer {
@@ -35,7 +36,12 @@
 .project-one-top-line {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 2s;
+}
+.h-line-false {
+  width: 0%;
+  height: 100%;
 }
 .project-one-left {
   width: 30%;
@@ -51,7 +57,13 @@
 .project-one-left-right {
   width: 1px;
   height: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 1.3s;
+  transition-delay: 0.3s;
+}
+.v-line-false {
+  height: 0%;
+  width: 1px;
 }
 .project-one-right {
   width: 70%;
@@ -83,6 +95,8 @@
   background-position: center;
   background-repeat: none;
   transition: 0.8s;
+  display: flex;
+  align-items: flex-end;
 }
 .project-one-right-inner-image-two {
   width: 40%;
@@ -92,6 +106,8 @@
   background-position: center;
   background-repeat: none;
   transition: 0.8s;
+  display: flex;
+  align-items: flex-end;
 }
 .project-one-right-inner-image-three {
   width: 40%;
@@ -101,6 +117,8 @@
   background-position: center;
   background-repeat: none;
   transition: 0.8s;
+  display: flex;
+  align-items: flex-end;
 }
 .project-one-right-inner-image-four {
   width: 34%;
@@ -110,8 +128,27 @@
   background-position: center;
   background-repeat: none;
   transition: 0.8s;
+  display: flex;
+  align-items: flex-end;
 }
-
+.image-cover {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.image-cover-false {
+  width: 100%;
+  height: 0%;
+  background-color: white;
+  transition: 1s ease-in;
+}
+.image-cover-false-delay {
+  width: 100%;
+  height: 0%;
+  background-color: white;
+  transition: 1s ease-in;
+  transition-delay: 0.8s;
+}
 .project-info-top {
   width: 500px;
   height: 50px;
@@ -176,6 +213,8 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+  transition: 0.3s;
+  overflow: hidden;
 }
 .right-button {
   margin-left: 10px;
@@ -183,4 +222,22 @@
 .right-button:hover,
 .left-button:hover {
   cursor: pointer;
+}
+.left-button-hovered,
+.right-button-hovered {
+  width: 60px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: 0.3s;
+  color: white;
+  font-size: 14px;
+  overflow: hidden;
+}
+.right-button-hovered {
+  margin-left: 10px;
 }
