@@ -9,14 +9,29 @@ function ProjectOne() {
   // const spanStaticStyling = { marginTop: "60px", opacity: "0%" };
 
   const [number, setNumber] = useState(1);
+  const [numberTwo, setNumberTwo] = useState(1);
+  const [numberThree, setNumberThree] = useState(1);
+  const [numberFour, setNumberFour] = useState(1);
+  const [numberFive, setNumberFive] = useState(1);
+
   const [lineOne, setLineOne] = useState(false);
   const [lineTwo, setLineTwo] = useState(false);
   const [imageOne, setImageOne] = useState(true);
   const [imageTwo, setImageTwo] = useState(true);
 
   const [buttonLeft, setButtonLeft] = useState(false);
-  const [buttonRight, setButtonRight] = useState(false);
+  const [buttonLeftTwo, setButtonLeftTwo] = useState(false);
+  const [buttonLeftThree, setButtonLeftThree] = useState(false);
+  const [buttonLeftFour, setButtonLeftFour] = useState(false);
+  const [buttonLeftFive, setButtonLeftFive] = useState(false);
 
+  const [buttonRight, setButtonRight] = useState(false);
+  const [buttonRightTwo, setButtonRightTwo] = useState(false);
+  const [buttonRightThree, setButtonRightThree] = useState(false);
+  const [buttonRightFour, setButtonRightFour] = useState(false);
+  const [buttonRightFive, setButtonRightFive] = useState(false);
+
+  // one
   const handleLeftClick = () => {
     setNumber(number - 1);
     if (number <= 1) {
@@ -31,6 +46,74 @@ function ProjectOne() {
       setNumber(4);
       setButtonLeft(false);
       setButtonRight(false);
+    }
+  };
+  // two
+  const handleLeftClickTwo = () => {
+    setNumberTwo(numberTwo - 1);
+    if (numberTwo <= 1) {
+      setNumberTwo(1);
+      setButtonLeftTwo(false);
+      setButtonRightTwo(false);
+    }
+  };
+  const handleRightClickTwo = () => {
+    setNumberTwo(numberTwo + 1);
+    if (numberTwo >= 4) {
+      setNumberTwo(4);
+      setButtonLeftTwo(false);
+      setButtonRightTwo(false);
+    }
+  };
+  // three
+  const handleLeftClickThree = () => {
+    setNumberThree(numberThree - 1);
+    if (numberThree <= 1) {
+      setNumberThree(1);
+      setButtonLeftThree(false);
+      setButtonRightThree(false);
+    }
+  };
+  const handleRightClickThree = () => {
+    setNumberThree(numberThree + 1);
+    if (numberThree >= 4) {
+      setNumberThree(4);
+      setButtonLeftThree(false);
+      setButtonRightThree(false);
+    }
+  };
+  // four
+  const handleLeftClickFour = () => {
+    setNumberFour(numberFour - 1);
+    if (numberFour <= 1) {
+      setNumberFour(1);
+      setButtonLeftFour(false);
+      setButtonRightFour(false);
+    }
+  };
+  const handleRightClickFour = () => {
+    setNumberFour(numberFour + 1);
+    if (numberFour >= 4) {
+      setNumberFour(4);
+      setButtonLeftFour(false);
+      setButtonRightFour(false);
+    }
+  };
+  // five
+  const handleLeftClickFive = () => {
+    setNumberFive(numberFive - 1);
+    if (numberFive <= 1) {
+      setNumberFive(1);
+      setButtonLeftFive(false);
+      setButtonRightFive(false);
+    }
+  };
+  const handleRightClickFive = () => {
+    setNumberFive(numberFive + 1);
+    if (numberFive >= 4) {
+      setNumberFive(4);
+      setButtonLeftFive(false);
+      setButtonRightFive(false);
     }
   };
 
@@ -53,6 +136,18 @@ function ProjectOne() {
   const noOpacity = { opacity: "100%" };
   const handleLeftButtonStyling = number === 1 ? opacity : noOpacity;
   const handleRightButtonStyling = number === 4 ? opacity : noOpacity;
+
+  const handleLeftButtonStylingTwo = numberTwo === 1 ? opacity : noOpacity;
+  const handleRightButtonStylingTwo = numberTwo === 4 ? opacity : noOpacity;
+
+  const handleLeftButtonStylingThree = numberThree === 1 ? opacity : noOpacity;
+  const handleRightButtonStylingThree = numberThree === 4 ? opacity : noOpacity;
+
+  const handleLeftButtonStylingFour = numberFour === 1 ? opacity : noOpacity;
+  const handleRightButtonStylingFour = numberFour === 4 ? opacity : noOpacity;
+
+  const handleLeftButtonStylingFive = numberFive === 1 ? opacity : noOpacity;
+  const handleRightButtonStylingFive = numberFive === 4 ? opacity : noOpacity;
 
   // const leftOne = { left: "0%" };
   // const leftTwo = { left: "-80%" };
@@ -90,7 +185,15 @@ function ProjectOne() {
   // --------------------- PROGRAMATIC
 
   const leftMargin = number * 80 - 80;
+  const leftMarginTwo = numberTwo * 80 - 80;
+  const leftMarginThree = numberThree * 80 - 80;
+  const leftMarginFour = numberFour * 80 - 80;
+  const leftMarginFive = numberFive * 80 - 80;
   const handleMarginLeft = { left: `-${leftMargin}%` };
+  const handleMarginLeftTwo = { left: `-${leftMarginTwo}%` };
+  const handleMarginLeftThree = { left: `-${leftMarginThree}%` };
+  const handleMarginLeftFour = { left: `-${leftMarginFour}%` };
+  const handleMarginLeftFive = { left: `-${leftMarginFive}%` };
 
   return (
     <>
@@ -229,50 +332,50 @@ function ProjectOne() {
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">
-                  <div className="header">IMAGES {number}/4</div>
+                  <div className="header">IMAGES {numberTwo}/4</div>
                 </div>
                 <div className="project-info-bottom-bottom-bottom">
                   <div
                     className={
-                      buttonLeft ? "left-button-hovered" : "left-button"
+                      buttonLeftTwo ? "left-button-hovered" : "left-button"
                     }
-                    onClick={handleLeftClick}
-                    onMouseEnter={() => setButtonLeft(true)}
-                    onMouseLeave={() => setButtonLeft(false)}
-                    style={handleLeftButtonStyling}
+                    onClick={handleLeftClickTwo}
+                    onMouseEnter={() => setButtonLeftTwo(true)}
+                    onMouseLeave={() => setButtonLeftTwo(false)}
+                    style={handleLeftButtonStylingTwo}
                   >
                     <span
                       className={
-                        buttonLeft ? "products-text" : "products-text-false"
+                        buttonLeftTwo ? "products-text" : "products-text-false"
                       }
                     >
                       left
                     </span>
                     <div
                       className={
-                        buttonLeft ? "button-hover" : "button-hover-false"
+                        buttonLeftTwo ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
                   <div
                     className={
-                      buttonRight ? "right-button-hovered" : "right-button"
+                      buttonRightTwo ? "right-button-hovered" : "right-button"
                     }
-                    onClick={handleRightClick}
-                    onMouseEnter={() => setButtonRight(true)}
-                    onMouseLeave={() => setButtonRight(false)}
-                    style={handleRightButtonStyling}
+                    onClick={handleRightClickTwo}
+                    onMouseEnter={() => setButtonRightTwo(true)}
+                    onMouseLeave={() => setButtonRightTwo(false)}
+                    style={handleRightButtonStylingTwo}
                   >
                     <span
                       className={
-                        buttonRight ? "products-text" : "products-text-false"
+                        buttonRightTwo ? "products-text" : "products-text-false"
                       }
                     >
                       right
                     </span>
                     <div
                       className={
-                        buttonRight ? "button-hover" : "button-hover-false"
+                        buttonRightTwo ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
@@ -289,7 +392,7 @@ function ProjectOne() {
           ></div>
         </div>
         <div className="project-one-right">
-          <div className="project-one-right-inner" style={handleMarginLeft}>
+          <div className="project-one-right-inner" style={handleMarginLeftTwo}>
             <div className="project-one-right-inner-image image img-five">
               <div
                 className={imageOne ? "image-cover" : "image-cover-false"}
@@ -335,50 +438,54 @@ function ProjectOne() {
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">
-                  <div className="header">IMAGES {number}/4</div>
+                  <div className="header">IMAGES {numberThree}/4</div>
                 </div>
                 <div className="project-info-bottom-bottom-bottom">
                   <div
                     className={
-                      buttonLeft ? "left-button-hovered" : "left-button"
+                      buttonLeftThree ? "left-button-hovered" : "left-button"
                     }
-                    onClick={handleLeftClick}
-                    onMouseEnter={() => setButtonLeft(true)}
-                    onMouseLeave={() => setButtonLeft(false)}
-                    style={handleLeftButtonStyling}
+                    onClick={handleLeftClickThree}
+                    onMouseEnter={() => setButtonLeftThree(true)}
+                    onMouseLeave={() => setButtonLeftThree(false)}
+                    style={handleLeftButtonStylingThree}
                   >
                     <span
                       className={
-                        buttonLeft ? "products-text" : "products-text-false"
+                        buttonLeftThree
+                          ? "products-text"
+                          : "products-text-false"
                       }
                     >
                       left
                     </span>
                     <div
                       className={
-                        buttonLeft ? "button-hover" : "button-hover-false"
+                        buttonLeftThree ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
                   <div
                     className={
-                      buttonRight ? "right-button-hovered" : "right-button"
+                      buttonRightThree ? "right-button-hovered" : "right-button"
                     }
-                    onClick={handleRightClick}
-                    onMouseEnter={() => setButtonRight(true)}
-                    onMouseLeave={() => setButtonRight(false)}
-                    style={handleRightButtonStyling}
+                    onClick={handleRightClickThree}
+                    onMouseEnter={() => setButtonRightThree(true)}
+                    onMouseLeave={() => setButtonRightThree(false)}
+                    style={handleRightButtonStylingThree}
                   >
                     <span
                       className={
-                        buttonRight ? "products-text" : "products-text-false"
+                        buttonRightThree
+                          ? "products-text"
+                          : "products-text-false"
                       }
                     >
                       right
                     </span>
                     <div
                       className={
-                        buttonRight ? "button-hover" : "button-hover-false"
+                        buttonRightThree ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
@@ -395,7 +502,10 @@ function ProjectOne() {
           ></div>
         </div>
         <div className="project-one-right">
-          <div className="project-one-right-inner" style={handleMarginLeft}>
+          <div
+            className="project-one-right-inner"
+            style={handleMarginLeftThree}
+          >
             <div className="project-one-right-inner-image image img-nine">
               <div
                 className={imageOne ? "image-cover" : "image-cover-false"}
@@ -440,50 +550,52 @@ function ProjectOne() {
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">
-                  <div className="header">IMAGES {number}/4</div>
+                  <div className="header">IMAGES {numberFour}/4</div>
                 </div>
                 <div className="project-info-bottom-bottom-bottom">
                   <div
                     className={
-                      buttonLeft ? "left-button-hovered" : "left-button"
+                      buttonLeftFour ? "left-button-hovered" : "left-button"
                     }
-                    onClick={handleLeftClick}
-                    onMouseEnter={() => setButtonLeft(true)}
-                    onMouseLeave={() => setButtonLeft(false)}
-                    style={handleLeftButtonStyling}
+                    onClick={handleLeftClickFour}
+                    onMouseEnter={() => setButtonLeftFour(true)}
+                    onMouseLeave={() => setButtonLeftFour(false)}
+                    style={handleLeftButtonStylingFour}
                   >
                     <span
                       className={
-                        buttonLeft ? "products-text" : "products-text-false"
+                        buttonLeftFour ? "products-text" : "products-text-false"
                       }
                     >
                       left
                     </span>
                     <div
                       className={
-                        buttonLeft ? "button-hover" : "button-hover-false"
+                        buttonLeftFour ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
                   <div
                     className={
-                      buttonRight ? "right-button-hovered" : "right-button"
+                      buttonRightFour ? "right-button-hovered" : "right-button"
                     }
-                    onClick={handleRightClick}
-                    onMouseEnter={() => setButtonRight(true)}
-                    onMouseLeave={() => setButtonRight(false)}
-                    style={handleRightButtonStyling}
+                    onClick={handleRightClickFour}
+                    onMouseEnter={() => setButtonRightFour(true)}
+                    onMouseLeave={() => setButtonRightFour(false)}
+                    style={handleRightButtonStylingFour}
                   >
                     <span
                       className={
-                        buttonRight ? "products-text" : "products-text-false"
+                        buttonRightFour
+                          ? "products-text"
+                          : "products-text-false"
                       }
                     >
                       right
                     </span>
                     <div
                       className={
-                        buttonRight ? "button-hover" : "button-hover-false"
+                        buttonRightFour ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
@@ -500,7 +612,7 @@ function ProjectOne() {
           ></div>
         </div>
         <div className="project-one-right">
-          <div className="project-one-right-inner" style={handleMarginLeft}>
+          <div className="project-one-right-inner" style={handleMarginLeftFour}>
             <div className="project-one-right-inner-image image img-thirteen">
               <div
                 className={imageOne ? "image-cover" : "image-cover-false"}
@@ -545,28 +657,28 @@ function ProjectOne() {
               </div>
               <div className="project-info-bottom-bottom">
                 <div className="project-info-bottom-bottom-top">
-                  <div className="header">IMAGES {number}/4</div>
+                  <div className="header">IMAGES {numberFive}/4</div>
                 </div>
                 <div className="project-info-bottom-bottom-bottom">
                   <div
                     className={
-                      buttonLeft ? "left-button-hovered" : "left-button"
+                      buttonLeftFive ? "left-button-hovered" : "left-button"
                     }
-                    onClick={handleLeftClick}
-                    onMouseEnter={() => setButtonLeft(true)}
-                    onMouseLeave={() => setButtonLeft(false)}
-                    style={handleLeftButtonStyling}
+                    onClick={handleLeftClickFive}
+                    onMouseEnter={() => setButtonLeftFive(true)}
+                    onMouseLeave={() => setButtonLeftFive(false)}
+                    style={handleLeftButtonStylingFive}
                   >
                     <span
                       className={
-                        buttonLeft ? "products-text" : "products-text-false"
+                        buttonLeftFive ? "products-text" : "products-text-false"
                       }
                     >
                       left
                     </span>
                     <div
                       className={
-                        buttonLeft ? "button-hover" : "button-hover-false"
+                        buttonLeftFive ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
@@ -574,21 +686,23 @@ function ProjectOne() {
                     className={
                       buttonRight ? "right-button-hovered" : "right-button"
                     }
-                    onClick={handleRightClick}
-                    onMouseEnter={() => setButtonRight(true)}
-                    onMouseLeave={() => setButtonRight(false)}
-                    style={handleRightButtonStyling}
+                    onClick={handleRightClickFive}
+                    onMouseEnter={() => setButtonRightFive(true)}
+                    onMouseLeave={() => setButtonRightFive(false)}
+                    style={handleRightButtonStylingFive}
                   >
                     <span
                       className={
-                        buttonRight ? "products-text" : "products-text-false"
+                        buttonRightFive
+                          ? "products-text"
+                          : "products-text-false"
                       }
                     >
                       right
                     </span>
                     <div
                       className={
-                        buttonRight ? "button-hover" : "button-hover-false"
+                        buttonRightFive ? "button-hover" : "button-hover-false"
                       }
                     ></div>
                   </div>
@@ -605,7 +719,7 @@ function ProjectOne() {
           ></div>
         </div>
         <div className="project-one-right">
-          <div className="project-one-right-inner" style={handleMarginLeft}>
+          <div className="project-one-right-inner" style={handleMarginLeftFive}>
             <div className="project-one-right-inner-image image img-seventeen">
               <div
                 className={imageOne ? "image-cover" : "image-cover-false"}
