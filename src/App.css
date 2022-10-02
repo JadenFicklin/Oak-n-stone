@@ -7,3 +7,6 @@ body {
   overflow-x: hidden;
   color: #3a3a1f;
 }
+.transition {
+  transition: 0.3s;
+}
