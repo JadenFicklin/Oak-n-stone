@@ -6,26 +6,27 @@ function Projects() {
   const scrollPosition = useScrollPosition();
   console.log(scrollPosition);
 
-  const scrollNumber = scrollPosition;
-
-  const pictureWheelStyling = {
-    backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23CFCFB0FF' stroke-width='4' stroke-dasharray='${scrollNumber}%2c 700' stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e")`,
-  };
-
   return (
     <>
       <div className="projects-outer">
         <div className="project-left">
           <div className="project-wheel-outer">
-            <div
-              className="project-wheel-inner"
-              style={pictureWheelStyling}
-            ></div>
+            {/* <div className="project-wheel-inner"></div> */}
+            <div className="percent">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div className="number">
+                <h2>
+                  87 <span>%</span>
+                </h2>
+              </div>
+            </div>
+            <h2 className="text">Progress</h2>
           </div>
         </div>
         <div className="project-right">
-          <div className="row"></div>
-          <div className="row"></div>
           <div className="row"></div>
           <div className="row"></div>
           <div className="row"></div>
