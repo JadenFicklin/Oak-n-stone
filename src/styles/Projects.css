@@ -44,14 +44,18 @@ body {
   border-radius: 50%;
   position: fixed;
 } */
-.project-wheel-outer .percent svg circle {
-  width: 150px;
-  height: 150px;
+svg {
+  height: 500px;
+  width: 500px;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+circle {
+  stroke: #cfcfb0;
+  stroke-width: 5;
   fill: none;
-  stroke-width: 10;
-  stroke: #000;
-  transform: translate(5px, 5px);
-  stroke-dasharray: 440;
-  stroke-dashoffset: 200;
-  transition: 0.3s;
+  transition: 0.8s;
+  stroke-dasharray: 563;
 }

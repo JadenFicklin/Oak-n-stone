@@ -7,34 +7,25 @@ function Projects() {
   console.log(scrollPosition);
 
   return (
-    <>
-      <div className="projects-outer">
-        <div className="project-left">
-          <div className="project-wheel-outer">
-            {/* <div className="project-wheel-inner"></div> */}
-            <div className="percent">
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div className="number">
-                <h2>
-                  87 <span>%</span>
-                </h2>
-              </div>
-            </div>
-            <h2 className="text">Progress</h2>
+    <div className="projects-outer">
+      <div className="project-left">
+        <div className="project-wheel-outer">
+          {/* <div className="project-wheel-inner"></div> */}
+          <div className="percent">
+            <svg viewBox="-50 -50 300 300">
+              <circle cx="90" cy="90" r="90" stroke-dashoffset={0} />
+            </svg>
           </div>
         </div>
-        <div className="project-right">
-          <div className="row"></div>
-          <div className="row"></div>
-          <div className="row"></div>
-          <div className="row"></div>
-          <div className="row"></div>
-        </div>
       </div>
-    </>
+      <div className="project-right">
+        <div className="row"></div>
+        <div className="row"></div>
+        <div className="row"></div>
+        <div className="row"></div>
+        <div className="row"></div>
+      </div>
+    </div>
   );
 }
 
