@@ -2,64 +2,65 @@ import "./App.css";
 import Landing from "./components/Landing";
 import ProjectOne from "./components/ProjectOne";
 import SelectedWorks from "./components/SelectedWorks";
-import { useState } from "react";
+import Nav from "./components/Nav";
+// import { useState } from "react";
 import "../src/styles/Nav.css";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Contact from "./components/Contact";
+// import Projects from "./components/Projects";
+// import About from "./components/About";
+// import Contact from "./components/Contact";
 
 function App() {
-  const [projects, setProjects] = useState(false);
-  const [about, setAbout] = useState(false);
-  const [contact, setContact] = useState(false);
+  // const [projects, setProjects] = useState(false);
+  // const [about, setAbout] = useState(false);
+  // const [contact, setContact] = useState(false);
 
-  const [nav, setNav] = useState(false);
+  // const [nav, setNav] = useState(false);
 
-  const [homePage, setHomePage] = useState(true);
-  const [projectsPage, setProjectsPage] = useState(false);
-  const [aboutPage, setAboutPage] = useState(false);
-  const [contactPage, setContactPage] = useState(false);
+  // const [homePage, setHomePage] = useState(true);
+  // const [projectsPage, setProjectsPage] = useState(false);
+  // const [aboutPage, setAboutPage] = useState(false);
+  // const [contactPage, setContactPage] = useState(false);
 
-  setTimeout(() => {
-    setNav(true);
-  }, 1600);
+  // setTimeout(() => {
+  //   setNav(true);
+  // }, 1600);
 
-  const changeScroll = (position) => {
-    window.scrollTo(0, position);
-  };
+  // const changeScroll = (position) => {
+  //   window.scrollTo(0, position);
+  // };
 
-  const handleHomeClick = () => {
-    setHomePage(true);
-    setProjectsPage(false);
-    setAboutPage(false);
-    setContactPage(false);
-    changeScroll(0);
-  };
-  const handleProjectClick = () => {
-    setHomePage(false);
-    setProjectsPage(true);
-    setAboutPage(false);
-    setContactPage(false);
-    changeScroll(0);
-  };
-  const handleAboutClick = () => {
-    setHomePage(false);
-    setProjectsPage(false);
-    setAboutPage(true);
-    setContactPage(false);
-    changeScroll(0);
-  };
-  const handleContactClick = () => {
-    setHomePage(false);
-    setProjectsPage(false);
-    setAboutPage(false);
-    setContactPage(true);
-    changeScroll(0);
-  };
+  // const handleHomeClick = () => {
+  //   setHomePage(true);
+  //   setProjectsPage(false);
+  //   setAboutPage(false);
+  //   setContactPage(false);
+  //   changeScroll(0);
+  // };
+  // const handleProjectClick = () => {
+  //   setHomePage(false);
+  //   setProjectsPage(true);
+  //   setAboutPage(false);
+  //   setContactPage(false);
+  //   changeScroll(0);
+  // };
+  // const handleAboutClick = () => {
+  //   setHomePage(false);
+  //   setProjectsPage(false);
+  //   setAboutPage(true);
+  //   setContactPage(false);
+  //   changeScroll(0);
+  // };
+  // const handleContactClick = () => {
+  //   setHomePage(false);
+  //   setProjectsPage(false);
+  //   setAboutPage(false);
+  //   setContactPage(true);
+  //   changeScroll(0);
+  // };
 
   return (
     <>
-      <div className={nav ? "nav-outer" : "nav-outer transparent"}>
+      {/* <div className={nav ? "nav-outer" : "nav-outer transparent"}>
         <nav className="nav-inner">
           <div className="nav-logo">
             <img
@@ -131,7 +132,11 @@ function App() {
         <>
           <Contact />
         </>
-      )}
+      )} */}
+      <Nav />
+      <Landing />
+      <SelectedWorks />
+      <ProjectOne />
     </>
   );
 }
