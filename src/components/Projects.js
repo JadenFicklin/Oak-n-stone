@@ -13,7 +13,12 @@ function Projects() {
           {/* <div className="project-wheel-inner"></div> */}
           <div className="percent">
             <svg viewBox="-50 -50 300 300">
-              <circle cx="90" cy="90" r="90" stroke-dashoffset={0} />
+              <circle
+                cx="90"
+                cy="90"
+                r="90"
+                stroke-dashoffset={scrollPosition / 2}
+              />
             </svg>
           </div>
         </div>
