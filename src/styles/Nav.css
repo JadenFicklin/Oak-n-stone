@@ -36,6 +36,9 @@
   font-size: 10px;
   display: flex;
   flex-wrap: wrap;
+  text-decoration: none;
+  border: none;
+  color: #3a3a1f;
 }
 .nav-sub:hover,
 .nav-logo:hover {

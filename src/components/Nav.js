@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Nav.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [projects, setProjects] = useState(false);
@@ -24,15 +25,16 @@ function Nav() {
     <>
       <div className={nav ? "nav-outer" : "nav-outer transparent"}>
         <nav className="nav-inner">
-          <div className="nav-logo">
+          <Link to="/" className="nav-logo">
             <img
               src={require("../assets/logos/logo.JPG")}
               alt="logo"
               className="nav-logo-inner"
               onClick={handleLogoClick}
             />
-          </div>
-          <div
+          </Link>
+          <Link
+            to="/projects"
             className="nav-sub"
             onMouseEnter={() => setProjects(true)}
             onMouseLeave={() => setProjects(false)}
@@ -43,9 +45,10 @@ function Nav() {
                 projects ? "nav-line-hover-true" : "nav-line-hover-false"
               }
             ></div>
-          </div>
+          </Link>
 
-          <div
+          <Link
+            to="/about"
             className="nav-sub"
             onMouseEnter={() => setAbout(true)}
             onMouseLeave={() => setAbout(false)}
@@ -54,8 +57,9 @@ function Nav() {
             <div
               className={about ? "nav-line-hover-true" : "nav-line-hover-false"}
             ></div>
-          </div>
-          <div
+          </Link>
+          <Link
+            to="/contact"
             className="nav-sub"
             onMouseEnter={() => setContact(true)}
             onMouseLeave={() => setContact(false)}
@@ -66,7 +70,7 @@ function Nav() {
                 contact ? "nav-line-hover-true" : "nav-line-hover-false"
               }
             ></div>
-          </div>
+          </Link>
         </nav>
       </div>
     </>

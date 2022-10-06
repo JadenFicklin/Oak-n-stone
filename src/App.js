@@ -5,9 +5,12 @@ import SelectedWorks from "./components/SelectedWorks";
 import Nav from "./components/Nav";
 // import { useState } from "react";
 import "../src/styles/Nav.css";
-// import Projects from "./components/Projects";
-// import About from "./components/About";
-// import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import ErrorPage from "./components/ErrorPage";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   // const [projects, setProjects] = useState(false);
@@ -133,10 +136,54 @@ function App() {
           <Contact />
         </>
       )} */}
-      <Nav />
-      <Landing />
-      <SelectedWorks />
-      <ProjectOne />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                {" "}
+                <Nav />
+                <Landing />
+                <SelectedWorks />
+                <ProjectOne />
+              </>
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <>
+                <Nav /> <Projects />
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                <Nav /> <About />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <Nav /> <Contact />
+              </>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <>
+                <ErrorPage />
+              </>
+            }
+          />
+        </Routes>
+      </Router>
     </>
   );
 }
