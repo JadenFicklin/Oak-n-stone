@@ -14,6 +14,10 @@ body {
   width: 50%;
   height: 100%;
 }
+.project-left {
+  background-color: #3a3a1f;
+  height: 211vh;
+}
 .project-right {
   height: 2000px;
   background-color: #cfcfb0;
@@ -50,8 +54,50 @@ svg {
 }
 circle {
   stroke: #cfcfb0;
-  stroke-width: 2;
+  stroke-width: 1;
   fill: none;
   transition: 0.8s;
   stroke-dasharray: 563;
+}
+.background-cirlce {
+  stroke: #cfcfb05b;
+  z-index: -1;
+}
+.bubble {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #cfcfb0;
+  position: fixed;
+  left: 150px;
+  top: 150px;
+  transition: 0.3s;
+  background-color: #3a3a1f;
+}
+.bubble:hover {
+  background-color: #cfcfb0;
+}
+.circle-one {
+  left: 360px;
+  top: 273px;
+}
+.circle-two {
+  left: 560px;
+  top: 380px;
+}
+.circle-three {
+  left: 560px;
+  top: 644px;
+}
+.circle-four {
+  left: 360px;
+  top: 754px;
+}
+.circle-five {
+  left: 160px;
+  top: 644px;
+}
+.circle-six {
+  left: 160px;
+  top: 380px;
 }
