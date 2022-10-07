@@ -256,137 +256,139 @@ circle {
 }
 .pictures-inner {
   width: 100%;
-  height: 70%;
+  height: 85%;
   overflow: hidden;
 }
 .p-t {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: none;
 }
 /* custom cabinet pictures */
 .picture-one-true {
-  background-image: url("../assets/images/1.jpeg");
-}
-.picture-two-true {
-  background-image: url("../assets/images/2.jpeg");
-}
-.picture-three-true {
-  background-image: url("../assets/images/3.jpg");
-}
-.picture-four-true {
-  background-image: url("../assets/images/4.jpg");
-}
-.picture-five-true {
-  background-image: url("../assets/images/5.jpg");
-}
-.picture-six-true {
   background-image: url("../assets/images/6.jpg");
 }
-.picture-seven-true {
+.picture-two-true {
+  background-image: url("../assets/images/3.jpg");
+}
+.picture-three-true {
   background-image: url("../assets/images/7.jpg");
+}
+.picture-four-true {
+  background-image: url("../assets/images/34.jpeg");
+}
+.picture-five-true {
+  background-image: url("../assets/images/33.jpg");
+}
+.picture-six-true {
+  background-image: url("../assets/images/4.jpg");
+}
+.picture-seven-true {
+  background-image: url("../assets/images/1.jpeg");
 }
 /* kitchen remodel pictures  */
 .picture-one-true-kitchen-remodel {
-  background-image: url("../assets/images/1.jpeg");
-}
-.picture-two-true-kitchen-remodel {
-  background-image: url("../assets/images/2.jpeg");
-}
-.picture-three-true-kitchen-remodel {
-  background-image: url("../assets/images/3.jpg");
-}
-.picture-four-true-kitchen-remodel {
-  background-image: url("../assets/images/4.jpg");
-}
-.picture-five-true-kitchen-remodel {
-  background-image: url("../assets/images/5.jpg");
-}
-.picture-six-true-kitchen-remodel {
   background-image: url("../assets/images/6.jpg");
 }
-.picture-seven-true-kitchen-remodel {
+.picture-two-true-kitchen-remodel {
+  background-image: url("../assets/images/3.jpg");
+}
+.picture-three-true-kitchen-remodel {
   background-image: url("../assets/images/7.jpg");
+}
+.picture-four-true-kitchen-remodel {
+  background-image: url("../assets/images/5.jpg");
+}
+.picture-five-true-kitchen-remodel {
+  background-image: url("../assets/images/34.jpeg");
+}
+.picture-six-true-kitchen-remodel {
+  background-image: url("../assets/images/33.jpg");
+}
+.picture-seven-true-kitchen-remodel {
+  background-image: url("../assets/images/4.jpg");
 }
 /* bathroom remodel pictures */
 .picture-one-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/30.jpg");
 }
 .picture-two-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/25.jpg");
 }
 .picture-three-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/10.jpg");
 }
 .picture-four-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/24.jpg");
 }
 .picture-five-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/23.jpg");
 }
 .picture-six-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/18.jpg");
 }
 .picture-seven-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/8.jpg");
 }
 .picture-eight-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/32.jpg");
 }
 .picture-nine-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/32.jpg");
 }
 .picture-ten-true-bathroom-remodel {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/32.jpg");
 }
 /* custom woodwork */
 .picture-one-true-custom-woodwork {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/31.jpg");
 }
 .picture-two-true-custom-woodwork {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/9.jpg");
 }
 .picture-three-true-custom-woodwork {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/17.jpg");
 }
 .picture-four-true-custom-woodwork {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/16.jpg");
 }
 .picture-five-true-custom-woodwork {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/22.jpg");
 }
 .picture-six-true-custom-woodwork {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/13.jpg");
+  background-position: top;
 }
 .picture-seven-true-custom-woodwork {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/12.jpg");
 }
+/* and more  */
 .picture-one-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/19.jpg");
 }
 .picture-two-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/29.jpg");
 }
 .picture-three-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/27.jpg");
 }
 .picture-four-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/26.jpg");
 }
 .picture-five-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/15.jpg");
 }
 .picture-six-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/11.jpg");
 }
 .picture-seven-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/14.jpg");
 }
 .picture-eight-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/21.jpg");
 }
 .picture-nine-true-and-more {
-  background-image: url("../assets/images/7.jpg");
+  background-image: url("../assets/images/20.jpg");
 }

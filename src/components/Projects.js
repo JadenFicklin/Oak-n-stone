@@ -96,8 +96,8 @@ function Projects() {
   };
   const handlePicturesRightClickBathroomRemodels = () => {
     setBathroomRemodels(bathroomRemodels + 1);
-    if (bathroomRemodels >= 10) {
-      setBathroomRemodels(10);
+    if (bathroomRemodels >= 8) {
+      setBathroomRemodels(8);
     }
   };
   const handlePicturesLeftClickCustomWoodwork = () => {
