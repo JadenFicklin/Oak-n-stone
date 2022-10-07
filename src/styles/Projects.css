@@ -57,7 +57,7 @@ circle {
   stroke: #69694e;
   stroke-width: 1.5;
   fill: none;
-  transition: 0.8s;
+  /* transition: 0.8s; */
   stroke-dasharray: 563;
 }
 .background-cirlce {
@@ -72,8 +72,11 @@ circle {
   position: fixed;
   left: 150px;
   top: 150px;
-  transition: 0.3s;
+  transition: 0.8s;
   background-color: #3a3a1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bubble:hover {
   background-color: #cfcfb0;
@@ -101,4 +104,13 @@ circle {
 .circle-six {
   left: 60px;
   top: 380px;
+}
+
+.true {
+  scale: 2.2;
+  background-color: #cfcfb0;
+}
+.number-true {
+  color: #3a3a1f;
+  scale: 0.7;
 }
