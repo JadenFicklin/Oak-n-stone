@@ -38,6 +38,7 @@ function Nav() {
             className="nav-sub"
             onMouseEnter={() => setProjects(true)}
             onMouseLeave={() => setProjects(false)}
+            onClick={handleLogoClick}
           >
             PROJECTS
             <div

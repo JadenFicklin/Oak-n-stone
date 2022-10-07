@@ -49,7 +49,7 @@ function Projects() {
     changeScroll(2500);
   };
   const handleSixClick = () => {
-    changeScroll(3000);
+    changeScroll(3200);
   };
 
   return (
@@ -127,7 +127,7 @@ function Projects() {
               solid hardwood dovetail drawer, a birch ply dovetail drawer or a
               three quarter inch melamine drawer, depending on your budget.
             </div>
-            <div className="s-head">
+            {/* <div className="s-head">
               All of our boxes are CNC machined for precision fitment, made of
               three quarter melamine with over twenty color options. Our doors
               are also CNC machined for precision fitment. We offer thirty
@@ -144,6 +144,10 @@ function Projects() {
             <div className="s-head">
               If you are looking for custom cabinets to be build and want to
               install them yourself, give us a call.
+            </div> */}
+            <br></br>
+            <div className={!two ? "s-head pictures" : "s-head pictures false"}>
+              Contact us
             </div>
           </div>
         </div>

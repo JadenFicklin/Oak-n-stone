@@ -146,7 +146,7 @@ circle {
 .pictures {
   width: 80px;
   border: 1px solid #cfcfb0;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -161,6 +161,6 @@ circle {
 .false {
   border: 1px solid #69694e;
 }
-.row-inner-one {
+/* .row-inner-one {
   height: 60%;
-}
+} */
