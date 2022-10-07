@@ -1,10 +1,12 @@
-import React from "react";
+// import React, { useState } from "react";
 import "../styles/Projects.css";
 import useScrollPosition from "../hooks/useScrollPosition";
 
 function Projects() {
   const scrollPosition = useScrollPosition();
   console.log(scrollPosition);
+
+  // const [number, setNumber] = useState(200);
 
   return (
     <div className="projects-outer">
@@ -28,7 +30,7 @@ function Projects() {
                 cx="90"
                 cy="90"
                 r="90"
-                stroke-dashoffset={scrollPosition / 2}
+                stroke-dashoffset={-scrollPosition / 5.5}
               />
             </svg>
           </div>
@@ -41,6 +43,7 @@ function Projects() {
       <div className="circle-five bubble"></div>
       <div className="circle-six bubble"></div>
       <div className="project-right">
+        <div className="row"></div>
         <div className="row"></div>
         <div className="row"></div>
         <div className="row"></div>
