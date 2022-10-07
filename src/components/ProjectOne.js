@@ -207,7 +207,6 @@ function ProjectOne() {
       setImageTwoFive(false);
     }
   }, [scrollPosition]);
-  console.log(scrollPosition);
 
   const opacity = { opacity: "50%" };
   const noOpacity = { opacity: "100%" };
