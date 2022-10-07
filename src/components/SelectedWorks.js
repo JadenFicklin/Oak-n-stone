@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/SelectedWorks.css";
 import useScrollPosition from "../hooks/useScrollPosition";
+import { Link } from "react-router-dom";
 
 function SelectedWorks() {
   const scrollPosition = useScrollPosition();
@@ -16,6 +17,14 @@ function SelectedWorks() {
 
   const selectedStyling =
     scrollPosition < 1100 ? spanStaticStyling : spanChangeStyling;
+
+  const changeScroll = (position) => {
+    window.scrollTo(0, position);
+  };
+
+  const handleProjectsButtonClick = () => {
+    changeScroll(0);
+  };
 
   return (
     <>
@@ -33,7 +42,11 @@ function SelectedWorks() {
               custom kitchens and baths and other custom woodwork
             </div>
           </div>
-          <div className="selected-works-right-bottom">
+          <Link
+            to="/projects"
+            className="selected-works-right-bottom"
+            onClick={handleProjectsButtonClick}
+          >
             <div
               className={
                 one ? "selected-works-button" : "selected-works-button"
@@ -50,7 +63,7 @@ function SelectedWorks() {
                 className={button ? "button-hover" : "button-hover-false"}
               ></div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </>

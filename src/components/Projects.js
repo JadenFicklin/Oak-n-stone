@@ -3,8 +3,24 @@ import "../styles/Projects.css";
 import useScrollPosition from "../hooks/useScrollPosition";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { BiLeftArrowAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
+// import Svg from "./Svg";
 
 function Projects() {
+  const [projects, setProjects] = useState(false);
+  const [about, setAbout] = useState(false);
+  const [contact, setContact] = useState(false);
+
+  const [nav, setNav] = useState(false);
+
+  setTimeout(() => {
+    setNav(true);
+  }, 1600);
+
+  const handleLogoClick = () => {
+    changeScroll(0);
+  };
+
   const scrollPosition = useScrollPosition();
 
   const [customCabinets, setCustomCabinets] = useState(1);
@@ -127,6 +143,69 @@ function Projects() {
   console.log(customCabinets);
   return (
     <>
+      {/* nav  */}
+      <div className={nav ? "nav-outer-two" : "nav-outer-two transparent"}>
+        <nav className="nav-inner">
+          <Link to="/" className="nav-logo">
+            {/* <img
+              src={require("../assets/logos/logo.JPG")}
+              alt="logo"
+              className="nav-logo-inner"
+              onClick={handleLogoClick}
+            /> */}
+            <img
+              src={require("../assets/images/oaklogo.svg").default}
+              alt="logo"
+              class="oak-logo"
+              onClick={handleLogoClick}
+            />
+          </Link>
+          <Link
+            to="/projects"
+            className="nav-sub-two"
+            onMouseEnter={() => setProjects(true)}
+            onMouseLeave={() => setProjects(false)}
+            onClick={handleLogoClick}
+          >
+            PROJECTS
+            <div
+              className={
+                projects
+                  ? "nav-line-hover-true-two"
+                  : "nav-line-hover-false-two"
+              }
+            ></div>
+          </Link>
+
+          <Link
+            to="/about"
+            className="nav-sub-two"
+            onMouseEnter={() => setAbout(true)}
+            onMouseLeave={() => setAbout(false)}
+          >
+            ABOUT
+            <div
+              className={
+                about ? "nav-line-hover-true-two" : "nav-line-hover-false-two"
+              }
+            ></div>
+          </Link>
+          <Link
+            to="/contact"
+            className="nav-sub-two"
+            onMouseEnter={() => setContact(true)}
+            onMouseLeave={() => setContact(false)}
+          >
+            CONTACT
+            <div
+              className={
+                contact ? "nav-line-hover-true-two" : "nav-line-hover-false-two"
+              }
+            ></div>
+          </Link>
+        </nav>
+      </div>
+      {/* Projects  */}
       <div className="projects-outer">
         <div className="project-left">
           <div className="project-wheel-outer">

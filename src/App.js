@@ -154,7 +154,7 @@ function App() {
             path="/projects"
             element={
               <>
-                <Nav /> <Projects />
+                <Projects />
               </>
             }
           />
