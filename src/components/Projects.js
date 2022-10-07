@@ -14,6 +14,12 @@ function Projects() {
   const [five, setFive] = useState(true);
   const [six, setSix] = useState(true);
 
+  const [handlePicturesTwo, setHandlePicturesTwo] = useState(false);
+  const [handlePicturesThree, setHandlePicturesThree] = useState(false);
+  const [handlePicturesFour, setHandlePicturesFour] = useState(false);
+  const [handlePicturesFive, setHandlePicturesFive] = useState(false);
+  const [handlePicturesSix, setHandlePicturesSix] = useState(false);
+
   useEffect(() => {
     const numOne = scrollPosition >= 0 && scrollPosition <= 499;
     const numTwo = scrollPosition >= 500 && scrollPosition <= 1099;
@@ -160,7 +166,10 @@ function Projects() {
               close hinges and soft close under mount drawer slides.
             </div>
             <br></br>
-            <div className={!two ? "s-head pictures" : "s-head pictures false"}>
+            <div
+              onClick={() => setHandlePicturesTwo(true)}
+              className={!two ? "s-head pictures" : "s-head pictures false"}
+            >
               pictures
             </div>
           </div>
@@ -174,6 +183,7 @@ function Projects() {
             </div>
             <br></br>
             <div
+              onClick={() => setHandlePicturesThree(true)}
               className={!three ? "s-head pictures" : "s-head pictures false"}
             >
               pictures
@@ -189,6 +199,7 @@ function Projects() {
             </div>
             <br></br>
             <div
+              onClick={() => setHandlePicturesFour(true)}
               className={!four ? "s-head pictures" : "s-head pictures false"}
             >
               pictures
@@ -204,6 +215,7 @@ function Projects() {
             </div>
             <br></br>
             <div
+              onClick={() => setHandlePicturesFive(true)}
               className={!five ? "s-head pictures" : "s-head pictures false"}
             >
               pictures
@@ -217,13 +229,66 @@ function Projects() {
               We can build pretty much anything you need.
             </div>
             <br></br>
-            <div className={!six ? "s-head pictures" : "s-head pictures false"}>
+            <div
+              onClick={() => setHandlePicturesSix(true)}
+              className={!six ? "s-head pictures" : "s-head pictures false"}
+            >
               pictures
             </div>
           </div>
         </div>
       </div>
       <div className="project-far-right"></div>
+      {handlePicturesTwo ? (
+        <div className="pictures-true handle-pictures-two">
+          <div
+            onClick={() => setHandlePicturesTwo(false)}
+            className="back-button"
+          >
+            back
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesThree ? (
+        <div className="pictures-true handle-pictures-three">
+          <div
+            onClick={() => setHandlePicturesThree(false)}
+            className="back-button"
+          >
+            back
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesFour ? (
+        <div className="pictures-true handle-pictures-four">
+          <div
+            onClick={() => setHandlePicturesFour(false)}
+            className="back-button"
+          >
+            back
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesFive ? (
+        <div className="pictures-true handle-pictures-five">
+          <div
+            onClick={() => setHandlePicturesFive(false)}
+            className="back-button"
+          >
+            back
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesSix ? (
+        <div className="pictures-true handle-pictures-six">
+          <div
+            onClick={() => setHandlePicturesSix(false)}
+            className="back-button"
+          >
+            back
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
