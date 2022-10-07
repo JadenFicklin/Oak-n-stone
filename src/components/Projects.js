@@ -7,7 +7,12 @@ import { BiLeftArrowAlt } from "react-icons/bi";
 function Projects() {
   const scrollPosition = useScrollPosition();
 
-  // const [number, setNumber] = useState(200);
+  const [customCabinets, setCustomCabinets] = useState(1);
+  const [kitchenRemodels, setKitchenRemodels] = useState(1);
+  const [bathroomRemodels, setBathroomRemodels] = useState(1);
+  const [customWoodwork, setCustomWoodwork] = useState(1);
+  const [andMore, setAndMore] = useState(1);
+
   const [one, setOne] = useState(true);
   const [two, setTwo] = useState(true);
   const [three, setThree] = useState(true);
@@ -59,8 +64,67 @@ function Projects() {
     changeScroll(3200);
   };
 
-  console.log(handlePicturesTwo);
-
+  const handlePicturesLeftClickCabinets = () => {
+    setCustomCabinets(customCabinets - 1);
+    if (customCabinets <= 1) {
+      setCustomCabinets(1);
+    }
+  };
+  const handlePicturesRightClickCabinets = () => {
+    setCustomCabinets(customCabinets + 1);
+    if (customCabinets >= 7) {
+      setCustomCabinets(7);
+    }
+  };
+  const handlePicturesLeftClickKitchenRemodel = () => {
+    setKitchenRemodels(kitchenRemodels - 1);
+    if (kitchenRemodels <= 1) {
+      setKitchenRemodels(1);
+    }
+  };
+  const handlePicturesRightClickKitchenRemodel = () => {
+    setKitchenRemodels(kitchenRemodels + 1);
+    if (kitchenRemodels >= 7) {
+      setKitchenRemodels(7);
+    }
+  };
+  const handlePicturesLeftClickBathroomRemodels = () => {
+    setBathroomRemodels(bathroomRemodels - 1);
+    if (bathroomRemodels <= 1) {
+      setBathroomRemodels(1);
+    }
+  };
+  const handlePicturesRightClickBathroomRemodels = () => {
+    setBathroomRemodels(bathroomRemodels + 1);
+    if (bathroomRemodels >= 10) {
+      setBathroomRemodels(10);
+    }
+  };
+  const handlePicturesLeftClickCustomWoodwork = () => {
+    setCustomWoodwork(customWoodwork - 1);
+    if (customWoodwork <= 1) {
+      setCustomWoodwork(1);
+    }
+  };
+  const handlePicturesRightClickCustomWoodwork = () => {
+    setCustomWoodwork(customWoodwork + 1);
+    if (customWoodwork >= 7) {
+      setCustomWoodwork(7);
+    }
+  };
+  const handlePicturesLeftClickAndMore = () => {
+    setAndMore(andMore - 1);
+    if (andMore <= 1) {
+      setAndMore(1);
+    }
+  };
+  const handlePicturesRightClickAndMore = () => {
+    setAndMore(andMore + 1);
+    if (andMore >= 9) {
+      setAndMore(9);
+    }
+  };
+  console.log(customCabinets);
   return (
     <>
       <div className="projects-outer">
@@ -301,12 +365,209 @@ function Projects() {
       {handlePicturesTwo ? (
         <div className="pictures-outer">
           <div className="pictures-inner">
-            <div className="picture-one"></div>
+            {customCabinets === 1 && (
+              <div className="picture-one-true p-t"></div>
+            )}
+            {customCabinets === 2 && (
+              <div className="picture-two-true p-t"></div>
+            )}
+            {customCabinets === 3 && (
+              <div className="picture-three-true p-t"></div>
+            )}
+            {customCabinets === 4 && (
+              <div className="picture-four-true p-t"></div>
+            )}
+            {customCabinets === 5 && (
+              <div className="picture-five-true p-t"></div>
+            )}
+            {customCabinets === 6 && (
+              <div className="picture-six-true p-t"></div>
+            )}
+            {customCabinets === 7 && (
+              <div className="picture-seven-true p-t"></div>
+            )}
           </div>
-          <div className="pictures-left-button">
+          <div
+            className="pictures-left-button"
+            onClick={handlePicturesLeftClickCabinets}
+          >
             <BiLeftArrowAlt className="pic-icon icon-left" />
           </div>
-          <div className="pictures-right-button">
+          <div
+            onClick={handlePicturesRightClickCabinets}
+            className="pictures-right-button"
+          >
+            <BiRightArrowAlt className="pic-icon icon-right" />
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesThree ? (
+        <div className="pictures-outer">
+          <div className="pictures-inner">
+            {kitchenRemodels === 1 && (
+              <div className="picture-one-true-kitchen-remodel p-t"></div>
+            )}
+            {kitchenRemodels === 2 && (
+              <div className="picture-two-true-kitchen-remodel p-t"></div>
+            )}
+            {kitchenRemodels === 3 && (
+              <div className="picture-three-true-kitchen-remodel p-t"></div>
+            )}
+            {kitchenRemodels === 4 && (
+              <div className="picture-four-true-kitchen-remodel p-t"></div>
+            )}
+            {kitchenRemodels === 5 && (
+              <div className="picture-five-true-kitchen-remodel p-t"></div>
+            )}
+            {kitchenRemodels === 6 && (
+              <div className="picture-six-true-kitchen-remodel p-t"></div>
+            )}
+            {kitchenRemodels === 7 && (
+              <div className="picture-seven-true-kitchen-remodel p-t"></div>
+            )}
+          </div>
+          <div
+            className="pictures-left-button"
+            onClick={handlePicturesLeftClickKitchenRemodel}
+          >
+            <BiLeftArrowAlt className="pic-icon icon-left" />
+          </div>
+          <div
+            onClick={handlePicturesRightClickKitchenRemodel}
+            className="pictures-right-button"
+          >
+            <BiRightArrowAlt className="pic-icon icon-right" />
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesFour ? (
+        <div className="pictures-outer">
+          <div className="pictures-inner">
+            {bathroomRemodels === 1 && (
+              <div className="picture-one-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 2 && (
+              <div className="picture-two-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 3 && (
+              <div className="picture-three-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 4 && (
+              <div className="picture-four-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 5 && (
+              <div className="picture-five-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 6 && (
+              <div className="picture-six-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 7 && (
+              <div className="picture-seven-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 8 && (
+              <div className="picture-eight-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 9 && (
+              <div className="picture-nine-true-bathroom-remodel p-t"></div>
+            )}
+            {bathroomRemodels === 10 && (
+              <div className="picture-ten-true-bathroom-remodel p-t"></div>
+            )}
+          </div>
+          <div
+            className="pictures-left-button"
+            onClick={handlePicturesLeftClickBathroomRemodels}
+          >
+            <BiLeftArrowAlt className="pic-icon icon-left" />
+          </div>
+          <div
+            onClick={handlePicturesRightClickBathroomRemodels}
+            className="pictures-right-button"
+          >
+            <BiRightArrowAlt className="pic-icon icon-right" />
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesFive ? (
+        <div className="pictures-outer">
+          <div className="pictures-inner">
+            {customWoodwork === 1 && (
+              <div className="picture-one-true-custom-woodwork p-t"></div>
+            )}
+            {customWoodwork === 2 && (
+              <div className="picture-two-true-custom-woodwork p-t"></div>
+            )}
+            {customWoodwork === 3 && (
+              <div className="picture-three-true-custom-woodwork p-t"></div>
+            )}
+            {customWoodwork === 4 && (
+              <div className="picture-four-true-custom-woodwork p-t"></div>
+            )}
+            {customWoodwork === 5 && (
+              <div className="picture-five-true-custom-woodwork p-t"></div>
+            )}
+            {customWoodwork === 6 && (
+              <div className="picture-six-true-custom-woodwork p-t"></div>
+            )}
+            {customWoodwork === 7 && (
+              <div className="picture-seven-true-custom-woodwork p-t"></div>
+            )}
+          </div>
+          <div
+            className="pictures-left-button"
+            onClick={handlePicturesLeftClickCustomWoodwork}
+          >
+            <BiLeftArrowAlt className="pic-icon icon-left" />
+          </div>
+          <div
+            onClick={handlePicturesRightClickCustomWoodwork}
+            className="pictures-right-button"
+          >
+            <BiRightArrowAlt className="pic-icon icon-right" />
+          </div>
+        </div>
+      ) : null}
+      {handlePicturesSix ? (
+        <div className="pictures-outer">
+          <div className="pictures-inner">
+            {andMore === 1 && (
+              <div className="picture-one-true-and-more p-t"></div>
+            )}
+            {andMore === 2 && (
+              <div className="picture-two-true-and-more p-t"></div>
+            )}
+            {andMore === 3 && (
+              <div className="picture-three-true-and-more p-t"></div>
+            )}
+            {andMore === 4 && (
+              <div className="picture-four-true-and-more p-t"></div>
+            )}
+            {andMore === 5 && (
+              <div className="picture-five-true-and-more p-t"></div>
+            )}
+            {andMore === 6 && (
+              <div className="picture-six-true-and-more p-t"></div>
+            )}
+            {andMore === 7 && (
+              <div className="picture-seven-true-and-more p-t"></div>
+            )}
+            {andMore === 8 && (
+              <div className="picture-eight-true-and-more p-t"></div>
+            )}
+            {andMore === 9 && (
+              <div className="picture-nine-true-and-more p-t"></div>
+            )}
+          </div>
+          <div
+            className="pictures-left-button"
+            onClick={handlePicturesLeftClickAndMore}
+          >
+            <BiLeftArrowAlt className="pic-icon icon-left" />
+          </div>
+          <div
+            onClick={handlePicturesRightClickAndMore}
+            className="pictures-right-button"
+          >
             <BiRightArrowAlt className="pic-icon icon-right" />
           </div>
         </div>

@@ -187,21 +187,13 @@ circle {
   left: 100px;
   top: 100px;
   transition: 0.3s;
+  user-select: none;
 }
 .back-button:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.863);
   border: 1px solid black;
   color: black;
-}
-.pictures-outer {
-  position: fixed;
-  width: 80%;
-  height: 100vh;
-  top: 0px;
-  right: 50%;
-  z-index: 4;
-  margin-right: -40%;
 }
 .pictures-left-button,
 .pictures-right-button {
@@ -248,4 +240,153 @@ circle {
   top: 10px;
   width: 30px;
   height: 30px;
+}
+.pictures-outer {
+  position: fixed;
+  width: 65%;
+  height: 100vh;
+  top: 0px;
+  right: 50%;
+  z-index: 4;
+  margin-right: -32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pictures-inner {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.p-t {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: none;
+}
+/* custom cabinet pictures */
+.picture-one-true {
+  background-image: url("../assets/images/1.jpeg");
+}
+.picture-two-true {
+  background-image: url("../assets/images/2.jpeg");
+}
+.picture-three-true {
+  background-image: url("../assets/images/3.jpg");
+}
+.picture-four-true {
+  background-image: url("../assets/images/4.jpg");
+}
+.picture-five-true {
+  background-image: url("../assets/images/5.jpg");
+}
+.picture-six-true {
+  background-image: url("../assets/images/6.jpg");
+}
+.picture-seven-true {
+  background-image: url("../assets/images/7.jpg");
+}
+/* kitchen remodel pictures  */
+.picture-one-true-kitchen-remodel {
+  background-image: url("../assets/images/1.jpeg");
+}
+.picture-two-true-kitchen-remodel {
+  background-image: url("../assets/images/2.jpeg");
+}
+.picture-three-true-kitchen-remodel {
+  background-image: url("../assets/images/3.jpg");
+}
+.picture-four-true-kitchen-remodel {
+  background-image: url("../assets/images/4.jpg");
+}
+.picture-five-true-kitchen-remodel {
+  background-image: url("../assets/images/5.jpg");
+}
+.picture-six-true-kitchen-remodel {
+  background-image: url("../assets/images/6.jpg");
+}
+.picture-seven-true-kitchen-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+/* bathroom remodel pictures */
+.picture-one-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-two-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-three-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-four-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-five-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-six-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-seven-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-eight-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-nine-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-ten-true-bathroom-remodel {
+  background-image: url("../assets/images/7.jpg");
+}
+/* custom woodwork */
+.picture-one-true-custom-woodwork {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-two-true-custom-woodwork {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-three-true-custom-woodwork {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-four-true-custom-woodwork {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-five-true-custom-woodwork {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-six-true-custom-woodwork {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-seven-true-custom-woodwork {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-one-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-two-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-three-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-four-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-five-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-six-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-seven-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-eight-true-and-more {
+  background-image: url("../assets/images/7.jpg");
+}
+.picture-nine-true-and-more {
+  background-image: url("../assets/images/7.jpg");
 }
