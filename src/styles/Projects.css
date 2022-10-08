@@ -9,12 +9,12 @@ body {
   flex-wrap: wrap;
 }
 
-.project-left {
+/* .project-left {
   width: 700px;
   height: 100vh;
   position: fixed;
   background-color: #3a3a1f;
-}
+} */
 .project-right {
   background-color: #3a3a1f;
   height: 4000px;
@@ -25,7 +25,8 @@ body {
   padding-bottom: 60px;
   position: absolute;
   width: 500px;
-  left: 700px;
+  left: 60%;
+  margin-left: -250px;
   z-index: 2;
 }
 .project-far-right {
@@ -33,7 +34,7 @@ body {
   position: fixed;
   right: 0px;
   height: 100vh;
-  width: 50%;
+  width: 100%;
   z-index: -1;
 }
 
@@ -44,6 +45,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 svg {
   height: 800px;
   width: 800px;
@@ -52,8 +54,9 @@ svg {
   align-items: center;
   justify-content: center;
   position: fixed;
-  left: -100px;
+  left: 30%;
   top: 100px;
+  margin-left: -500px;
 }
 circle {
   stroke: #69694e;
@@ -72,41 +75,42 @@ circle {
   border-radius: 50%;
   border: 1px solid #cfcfb0;
   position: fixed;
-  left: 150px;
   top: 150px;
   transition: 0.8s;
   background-color: #3a3a1f;
   display: flex;
   align-items: center;
   justify-content: center;
+  left: 30%;
 }
 .bubble:hover {
   background-color: #cfcfb0;
   cursor: pointer;
 }
 .circle-one {
-  left: 260px;
   top: 273px;
+  margin-left: -140px;
 }
 .circle-two {
-  left: 460px;
   top: 380px;
+  margin-left: 60px;
 }
 .circle-three {
-  left: 460px;
   top: 644px;
+  margin-left: 60px;
 }
 .circle-four {
-  left: 260px;
+  left: 30%;
   top: 754px;
+  margin-left: -140px;
 }
 .circle-five {
-  left: 60px;
   top: 644px;
+  margin-left: -340px;
 }
 .circle-six {
-  left: 60px;
   top: 380px;
+  margin-left: -340px;
 }
 
 .true {
@@ -436,4 +440,5 @@ circle {
   scale: 0.55;
   margin-left: 10px;
   margin-top: 10px;
+  transition: 0.3s;
 }
