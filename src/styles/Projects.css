@@ -240,7 +240,7 @@ circle {
 }
 .icon-right {
   position: absolute;
-  margin-left: 110px;
+  margin-left: -5px;
   top: 10px;
   width: 30px;
   height: 30px;
