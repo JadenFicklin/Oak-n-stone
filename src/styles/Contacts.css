@@ -90,3 +90,47 @@
 .horizontal-line-false {
   width: 0%;
 }
+.contact-inner-box-left-inner {
+  width: 80%;
+  height: 80%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.contact-us-header,
+.contact-us-name-input,
+.contact-us-email-input,
+.contact-us-message-input {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.contact-us-header {
+  font-size: 48px;
+  height: 80px;
+  background-color: lightgray;
+}
+.contact-us-name-input {
+  height: 30px;
+}
+.contact-us-email-input {
+  height: 30px;
+}
+.contact-us-message-input {
+  height: 200px;
+  padding-top: 10px;
+}
+container {
+  width: 80%;
+}
+.send-email {
+  width: 200px;
+  height: 50px;
+}
