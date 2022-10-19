@@ -205,6 +205,7 @@ function Projects() {
           </Link>
         </nav>
       </div>
+
       {/* Projects  */}
       <div className="projects-outer">
         <div className="project-left">

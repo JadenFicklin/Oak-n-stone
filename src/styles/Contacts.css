@@ -1,0 +1,92 @@
+.contact-outer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.contact-inner {
+  width: 100%;
+  height: 84vh;
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.contact-inner-top-line,
+.contact-inner-bottom-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transition: 2.8s;
+  opacity: 1;
+}
+.contact-inner-top-line {
+  top: 0px;
+}
+.contact-inner-bottom-line {
+  bottom: 0px;
+}
+
+.false-line {
+  width: 0%;
+  opacity: 0;
+}
+.contact-inner-box {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-inner-box-left,
+.contact-inner-box-right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-inner-box-left-line-one,
+.contact-inner-box-left-line-two,
+.contact-inner-box-left-line-three {
+  width: 1px;
+  background-color: rgb(202, 202, 202);
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 1.8s;
+}
+.contact-inner-box-left-line-one {
+  left: 0px;
+}
+.contact-inner-box-left-line-two {
+  right: 0px;
+}
+.contact-inner-box-left-line-three {
+  right: 0px;
+}
+.virticle-line-false {
+  height: 0%;
+}
+.map-box-outer {
+  height: 70%;
+  width: 75%;
+}
+.contact-info-box-outer {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.line-above-contact-info {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(202, 202, 202);
+  transition: 2s;
+}
+.horizontal-line-false {
+  width: 0%;
+}
