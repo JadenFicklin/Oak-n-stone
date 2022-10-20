@@ -1,6 +1,11 @@
 import React, { useState, useRef } from "react";
 import "../styles/Contacts.css";
 import emailjs from "@emailjs/browser";
+const {
+  REACT_APP_EMAIL_SERVICE_ID,
+  REACT_APP_EMAIL_TEMPLATE_ID,
+  REACT_APP_EMAIL_PUBLIC_KEY,
+} = process.env;
 
 function Contact() {
   const [topLine, setTopLine] = useState(false);
@@ -58,11 +63,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        `
-        ${process.env.REACT_APP_API_KEY_ONE},
-        ${process.env.REACT_APP_API_KEY_TWO},
+        REACT_APP_EMAIL_SERVICE_ID,
+        REACT_APP_EMAIL_TEMPLATE_ID,
         form.current,
-        ${process.env.REACT_APP_API_KEY_THREE}`
+        REACT_APP_EMAIL_PUBLIC_KEY
       )
       .then(
         (result) => {
