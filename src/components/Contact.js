@@ -25,6 +25,9 @@ function Contact() {
   const [inputValue, setInputValue] = useState("");
 
   const [contactUs, setContactUs] = useState(false);
+
+  const [mapTrue, setMapTrue] = useState(false);
+
   const center = useMemo(() => ({ lat: 41.7119, lng: -112.1655 }), []);
 
   // phone number formating
@@ -69,6 +72,9 @@ function Contact() {
   setTimeout(() => {
     setContactUs(true);
   }, 1200);
+  setTimeout(() => {
+    setMapTrue(true);
+  }, 1400);
 
   const form = useRef();
 
@@ -209,13 +215,14 @@ function Contact() {
                 <GoogleMap
                   zoom={8.2}
                   center={center}
-                  mapContainerClassName="map-container"
+                  mapContainerClassName={
+                    mapTrue ? "map-container" : "map-container map-false"
+                  }
                 >
                   <Marker position={center} />
                 </GoogleMap>
               )}
             </div>
-            {/* hello world! */}
 
             {/* info box */}
             <div className="contact-info-box-outer">

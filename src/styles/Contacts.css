@@ -82,6 +82,11 @@
 .map-container {
   width: 100%;
   height: 80%;
+  transition: 2s;
+  opacity: 1;
+}
+.map-false {
+  opacity: 0;
 }
 .contact-info-box-outer {
   width: 100%;
