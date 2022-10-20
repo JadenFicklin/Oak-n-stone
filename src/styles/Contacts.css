@@ -98,7 +98,7 @@
   margin-bottom: -80px;
   display: flex;
   flex-wrap: wrap;
-  font-size: 16px;
+  font-size: 14px;
   transition: 2s;
   opacity: 1;
 }
@@ -125,7 +125,7 @@
 .contact-info-box-inner {
   width: 60%;
   height: 70%;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 1;
   transition: 2s;
 }
