@@ -6,7 +6,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: white;
-  z-index: 3;
+  z-index: 9;
   opacity: 1;
   transition: 1s;
 }

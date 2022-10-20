@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "../styles/About.css";
+import ReactPlayer from "react-player";
+import vidOne from "../assets/videos/videoone.mp4";
 
 function About() {
+  const videoSrc = vidOne;
+
   const [topLine, setTopLine] = useState(false);
   const [bottomLine, setBottomLine] = useState(false);
 
@@ -22,10 +26,20 @@ function About() {
     <>
       <div className="about-outer">
         <div className="about-inner">
-          <div className="about-video"></div>
+          <ReactPlayer
+            url={videoSrc}
+            playing={true}
+            muted
+            loop={true}
+            width={"42%"}
+            height={"60%"}
+            className="about-video"
+          />
+
           <div className="about-header">
             We're an experienced team you can trust
           </div>
+          <div className="about-contact-button">CONTACT</div>
           <div className="about-left">
             <div className="about-left-box-one">Rodney Ficklin</div>
             <div className="cover-scrollbar">
