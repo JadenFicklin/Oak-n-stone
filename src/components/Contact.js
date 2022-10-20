@@ -27,6 +27,7 @@ function Contact() {
   const [contactUs, setContactUs] = useState(false);
 
   const [mapTrue, setMapTrue] = useState(false);
+  const [infoBox, setInfoBox] = useState(false);
 
   const center = useMemo(() => ({ lat: 41.7119, lng: -112.1655 }), []);
 
@@ -75,6 +76,9 @@ function Contact() {
   setTimeout(() => {
     setMapTrue(true);
   }, 1400);
+  setTimeout(() => {
+    setInfoBox(true);
+  }, 1600);
 
   const form = useRef();
 
@@ -208,24 +212,59 @@ function Contact() {
           {/* right box */}
           <div className="contact-inner-box-right">
             {/* map box */}
-            <div className="map-box-outer">
+            <div
+              className={mapTrue ? "map-box-outer" : "map-box-outer map-false"}
+            >
               {!isLoaded ? (
                 <div>Loading...</div>
               ) : (
-                <GoogleMap
-                  zoom={8.2}
-                  center={center}
-                  mapContainerClassName={
-                    mapTrue ? "map-container" : "map-container map-false"
-                  }
-                >
-                  <Marker position={center} />
-                </GoogleMap>
+                <>
+                  <div className="where-we-work-outer">
+                    <div className="where-we-work-text-header">
+                      WHERE WE WORK
+                    </div>
+                    <div className="where-we-work-text-sub-header">
+                      We work in the greater Wasatch
+                    </div>
+                    <div className="where-we-work-text-sub-header">
+                      Front, From Logan to Lehi.
+                    </div>
+                  </div>
+
+                  <GoogleMap
+                    zoom={8.2}
+                    center={center}
+                    mapContainerClassName="map-container"
+                  >
+                    <Marker position={center} />
+                  </GoogleMap>
+                </>
               )}
             </div>
 
             {/* info box */}
             <div className="contact-info-box-outer">
+              <div
+                className={
+                  infoBox
+                    ? "contact-info-box-inner"
+                    : "contact-info-box-inner info-box-false"
+                }
+              >
+                <div className="contact-info-header wide">CONTACT</div>
+                <a
+                  className="contact-info-email wide"
+                  href="mailto:oakandstonecabinets@gmail.com"
+                >
+                  oakandstonecabinets@gmail.com
+                </a>
+                <div className="contact-info-number-one wide">
+                  (801) 430-6451
+                </div>
+                <div className="contact-info-number-two wide">
+                  (801) 238-9152
+                </div>
+              </div>
               <div
                 className={
                   lineFour
