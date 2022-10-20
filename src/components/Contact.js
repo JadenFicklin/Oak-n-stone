@@ -1,13 +1,19 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import "../styles/Contacts.css";
 import emailjs from "@emailjs/browser";
-const {
-  REACT_APP_EMAIL_SERVICE_ID,
-  REACT_APP_EMAIL_TEMPLATE_ID,
-  REACT_APP_EMAIL_PUBLIC_KEY,
-} = process.env;
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 function Contact() {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_MAP_API_KEY,
+  });
+
+  const {
+    REACT_APP_EMAIL_SERVICE_ID,
+    REACT_APP_EMAIL_TEMPLATE_ID,
+    REACT_APP_EMAIL_PUBLIC_KEY,
+  } = process.env;
+
   const [topLine, setTopLine] = useState(false);
   const [bottomLine, setBottomLine] = useState(false);
 
@@ -18,6 +24,10 @@ function Contact() {
 
   const [inputValue, setInputValue] = useState("");
 
+  const [contactUs, setContactUs] = useState(false);
+  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
+
+  // phone number formating
   const handleInput = (e) => {
     const formattedPhoneNumber = formatPhoneNumber(e.target.value);
     setInputValue(formattedPhoneNumber);
@@ -37,6 +47,7 @@ function Contact() {
     )}-${phoneNumber.slice(6, 10)}`;
   }
 
+  // time outs
   setTimeout(() => {
     setTopLine(true);
   }, 300);
@@ -54,6 +65,9 @@ function Contact() {
   }, 600);
   setTimeout(() => {
     setLineFour(true);
+  }, 1200);
+  setTimeout(() => {
+    setContactUs(true);
   }, 1200);
 
   const form = useRef();
@@ -104,7 +118,13 @@ function Contact() {
           <div className="contact-inner-box-left">
             {/* inner left box */}
             <div className="contact-inner-box-left-inner">
-              <form ref={form} onSubmit={sendEmail} className="form-outer">
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className={
+                  contactUs ? "form-outer" : "form-outer contact-false"
+                }
+              >
                 <container className="contact-us-header">
                   <h1 className="contact-header">Contact us</h1>
                 </container>
@@ -182,7 +202,20 @@ function Contact() {
           {/* right box */}
           <div className="contact-inner-box-right">
             {/* map box */}
-            <div className="map-box-outer"></div>
+            <div className="map-box-outer">
+              {!isLoaded ? (
+                <div>Loading...</div>
+              ) : (
+                <GoogleMap
+                  zoom={10}
+                  center={center}
+                  mapContainerClassName="map-container"
+                >
+                  <Marker position={center} />
+                </GoogleMap>
+              )}
+            </div>
+            {/* hello world! */}
 
             {/* info box */}
             <div className="contact-info-box-outer">
