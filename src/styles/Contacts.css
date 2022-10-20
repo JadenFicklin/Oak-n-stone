@@ -47,6 +47,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.contact-inner-box-left {
+  align-items: flex-start;
+}
 
 .contact-inner-box-left-line-one,
 .contact-inner-box-left-line-two,
@@ -91,46 +94,78 @@
   width: 0%;
 }
 .contact-inner-box-left-inner {
-  width: 80%;
-  height: 80%;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-.contact-us-header,
-.contact-us-name-input,
-.contact-us-email-input,
-.contact-us-message-input {
   width: 90%;
+  height: 90%;
+  overflow: hidden;
+  padding-top: 30px;
+}
+
+.form-outer {
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  padding-left: 10px;
-  padding-right: 10px;
+  flex-wrap: wrap;
+  padding-left: 50px;
 }
-.contact-us-header {
-  font-size: 48px;
-  height: 80px;
-  background-color: lightgray;
-}
-.contact-us-name-input {
-  height: 30px;
-}
-.contact-us-email-input {
-  height: 30px;
-}
-.contact-us-message-input {
-  height: 200px;
-  padding-top: 10px;
-}
+
 container {
   width: 80%;
+  height: 60px;
+  position: relative;
 }
-.send-email {
-  width: 200px;
-  height: 50px;
+
+label {
+  position: absolute;
+  top: -20px;
+  font-weight: 600;
+}
+input,
+textarea {
+  border: 2px solid rgb(202, 202, 202);
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 100%;
+}
+input {
+  height: 30px;
+}
+textarea {
+  height: 120px;
+  padding-top: 10px;
+}
+.contact-header {
+  font-size: 58px;
+  width: 350px;
+}
+
+.contact-first-name,
+.contact-last-name {
+  width: 40%;
+}
+.contact-us-header {
+  padding-bottom: 80px;
+}
+.first-name-input,
+.last-name-input {
+  width: 90%;
+}
+.contact-last-name {
+  padding-left: 4%;
+}
+.contact-us-submit-button-outer {
+  width: 82.5%;
+  margin-top: 80px;
+}
+.contact-us-submit-button {
+  height: 40px;
+  border-radius: 50px;
+  color: rgb(83, 83, 83);
+  transition: 0.3s;
+}
+.contact-us-submit-button:hover {
+  color: white;
+  font-weight: 600px;
+  background-color: #3a3a1f;
+  border: 2px solid #3a3a1f;
+  cursor: pointer;
 }

@@ -104,40 +104,63 @@ function Contact() {
           <div className="contact-inner-box-left">
             {/* inner left box */}
             <div className="contact-inner-box-left-inner">
-              {/* <div className="contact-us-header">CONTACT US</div>
+              <form ref={form} onSubmit={sendEmail} className="form-outer">
+                <container className="contact-us-header">
+                  <h1 className="contact-header">Contact us</h1>
+                </container>
 
-              <container>
-                <div className="contact-name-text">Name:</div>
-                <input className="contact-us-name-input"></input>
-              </container>
-              <container>
-                <div className="contact-email-text">Email:</div>
-                <input className="contact-us-email-input"></input>
-              </container>
+                <container className="contact-first-name">
+                  <label>First Name</label>
+                  <input
+                    type="text"
+                    name="first_name"
+                    placeholder="First name"
+                    className="first-name-input"
+                  />
+                </container>
 
-              <container>
-                <div className="contact-message-text">Message:</div>
-                <textarea className="contact-us-message-input"></textarea>
-              </container>
+                <container className="contact-last-name">
+                  <label>Last Name</label>
+                  <input
+                    type="text"
+                    name="last_name"
+                    placeholder="Last name"
+                    className="last-name-input"
+                  />
+                </container>
 
-              <button className="send-email">Send Email</button> */}
-              <form ref={form} onSubmit={sendEmail}>
-                <label>First Name</label>
-                <input type="text" name="first_name" />
-                <label>Last Name</label>
-                <input type="text" name="last_name" />
-                <label>Email</label>
-                <input type="email" name="user_email" />
-                <label>Phone Number</label>
-                <input
-                  type="tel"
-                  name="user_phone"
-                  onChange={(e) => handleInput(e)}
-                  value={inputValue}
-                />
-                <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
+                <container>
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="user_email"
+                    placeholder="you@company.com"
+                  />
+                </container>
+
+                <container>
+                  <label>Phone Number</label>
+                  <input
+                    type="tel"
+                    name="user_phone"
+                    onChange={(e) => handleInput(e)}
+                    value={inputValue}
+                    placeholder="(555) 000-000"
+                  />
+                </container>
+
+                <container>
+                  <label>Message</label>
+                  <textarea name="message" />
+                </container>
+
+                <container className="contact-us-submit-button-outer">
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    className="contact-us-submit-button"
+                  />
+                </container>
               </form>
             </div>
             <div
