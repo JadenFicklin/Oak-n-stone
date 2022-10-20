@@ -25,7 +25,7 @@ function Contact() {
   const [inputValue, setInputValue] = useState("");
 
   const [contactUs, setContactUs] = useState(false);
-  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
+  const center = useMemo(() => ({ lat: 41.7119, lng: -112.1655 }), []);
 
   // phone number formating
   const handleInput = (e) => {
@@ -207,7 +207,7 @@ function Contact() {
                 <div>Loading...</div>
               ) : (
                 <GoogleMap
-                  zoom={10}
+                  zoom={8.2}
                   center={center}
                   mapContainerClassName="map-container"
                 >
