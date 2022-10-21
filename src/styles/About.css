@@ -20,6 +20,7 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  transition: 1.8s;
 }
 
 .about-middle-line {
@@ -41,6 +42,7 @@
   height: 60%;
   position: absolute;
   z-index: 7;
+  transition: 1.8s;
 }
 .about-header {
   width: 900px;
@@ -54,6 +56,7 @@
   align-items: center;
   justify-content: center;
   font-size: 34px;
+  transition: 1.8s;
 }
 .about-left-box-one {
   width: 200px;
@@ -132,7 +135,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(202, 202, 202);
-  transition: 0.3s;
+  transition: 1.8s;
 }
 .about-contact-button:hover {
   cursor: pointer;
@@ -154,7 +157,9 @@
 .about-inner-bottom-line {
   bottom: 0px;
 }
-
+.opacity-zero {
+  opacity: 0;
+}
 @media screen and (max-width: 1200px) {
   .about-outer {
     overflow: auto;
@@ -177,6 +182,7 @@
   }
   .about-video {
     top: -280px;
+    transition: 1.8s;
   }
   .about-right-box-one,
   .about-left-box-one {

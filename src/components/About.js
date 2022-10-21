@@ -13,6 +13,12 @@ function About() {
 
   const [middleLine, setMiddleLine] = useState(false);
 
+  const [fadeInOne, setFadeInOne] = useState(false);
+  const [fadeInTwo, setFadeInTwo] = useState(false);
+  const [fadeInThree, setFadeInThree] = useState(false);
+  const [fadeInFour, setFadeInFour] = useState(false);
+  const [fadeInFive, setFadeInFive] = useState(false);
+
   // time outs
   setTimeout(() => {
     setTopLine(true);
@@ -23,13 +29,31 @@ function About() {
   setTimeout(() => {
     setMiddleLine(true);
   }, 600);
+  setTimeout(() => {
+    setFadeInOne(true);
+  }, 800);
+  setTimeout(() => {
+    setFadeInTwo(true);
+  }, 1000);
+  setTimeout(() => {
+    setFadeInThree(true);
+  }, 1200);
+  setTimeout(() => {
+    setFadeInFour(true);
+  }, 1200);
+  setTimeout(() => {
+    setFadeInFive(true);
+  }, 1400);
+
   console.log(videoSrc);
   console.log(videoSrcTwo);
   return (
     <>
       <div className="about-outer">
         <div className="about-inner">
-          <div className="about-video">
+          <div
+            className={fadeInTwo ? "about-video" : "about-video opacity-zero"}
+          >
             <ReactPlayer
               url={videoSrc}
               playing={true}
@@ -40,11 +64,23 @@ function About() {
             />
           </div>
 
-          <div className="about-header">
+          <div
+            className={fadeInOne ? "about-header" : "about-header opacity-zero"}
+          >
             We're an experienced team you can trust
           </div>
-          <div className="about-contact-button">CONTACT</div>
-          <div className="about-left">
+          <div
+            className={
+              fadeInFive
+                ? "about-contact-button"
+                : "about-contact-button opacity-zero"
+            }
+          >
+            CONTACT
+          </div>
+          <div
+            className={fadeInThree ? "about-left" : "about-left opacity-zero"}
+          >
             <div className="about-left-box-one">Rodney Ficklin</div>
             <div className="cover-scrollbar">
               <div className="scrollbar-cover"></div>
@@ -77,7 +113,9 @@ function About() {
               }
             ></div>
           </div>
-          <div className="about-right">
+          <div
+            className={fadeInFour ? "about-right" : "about-right opacity-zero"}
+          >
             <div className="about-right-box-one">Nate Judkins</div>
             <div className="about-right-box-two">
               Nate always loved building things as a child. He would build
