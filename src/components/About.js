@@ -24,13 +24,14 @@ function About() {
     setMiddleLine(true);
   }, 600);
   console.log(videoSrc);
+  console.log(videoSrcTwo);
   return (
     <>
       <div className="about-outer">
         <div className="about-inner">
           <div className="about-video">
             <ReactPlayer
-              url={videoSrcTwo}
+              url={videoSrc}
               playing={true}
               muted
               loop={true}
