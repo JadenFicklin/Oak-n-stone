@@ -142,7 +142,7 @@ function Projects() {
       setAndMore(9);
     }
   };
-  console.log(customCabinets);
+
   return (
     <>
       {/* nav  */}

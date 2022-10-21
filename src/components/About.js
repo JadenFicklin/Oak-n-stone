@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "../styles/About.css";
 import ReactPlayer from "react-player";
 import vidOne from "../assets/videos/videoone.mp4";
-// import vidTwo from "../assets/videos/videotwo.mp4";
+import vidTwo from "../assets/videos/videotwo.mp4";
 
 function About() {
   const videoSrc = vidOne;
-  // const videoSrcTwo = vidTwo;
+  const videoSrcTwo = vidTwo;
 
   const [topLine, setTopLine] = useState(false);
   const [bottomLine, setBottomLine] = useState(false);
@@ -23,14 +23,14 @@ function About() {
   setTimeout(() => {
     setMiddleLine(true);
   }, 600);
-
+  console.log(videoSrc);
   return (
     <>
       <div className="about-outer">
         <div className="about-inner">
           <div className="about-video">
             <ReactPlayer
-              url={videoSrc}
+              url={videoSrcTwo}
               playing={true}
               muted
               loop={true}
@@ -106,15 +106,15 @@ function About() {
           <div
             className={
               topLine
-                ? "contact-inner-top-line"
-                : "contact-inner-top-line false-line"
+                ? "about-inner-top-line"
+                : "about-inner-top-line false-line"
             }
           ></div>
           <div
             className={
               bottomLine
-                ? "contact-inner-bottom-line"
-                : "contact-inner-bottom-line false-line"
+                ? "about-inner-bottom-line"
+                : "about-inner-bottom-line false-line"
             }
           ></div>
         </div>

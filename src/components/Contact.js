@@ -96,7 +96,6 @@ function Contact() {
         (result) => {
           console.log(result.text);
           e.target.reset();
-          console.log("message sent");
           setInputValue("");
         },
         (error) => {
