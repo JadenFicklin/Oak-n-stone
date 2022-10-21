@@ -242,3 +242,67 @@ textarea {
   border: 2px solid #3a3a1f;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1100px) {
+  .contact-inner-box-left,
+  .contact-inner-box-right {
+    width: 100%;
+  }
+  .line-above-contact-info {
+    opacity: 0;
+  }
+  .contact-inner-box-left-line-one,
+  .contact-inner-box-left-line-two,
+  .contact-inner-box-left-line-three {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact-inner-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact-header {
+    scale: 0.8;
+    margin-left: -30px;
+  }
+  .contact-inner-box {
+    margin-left: -70px;
+  }
+  .map-box-outer {
+    width: 100%;
+    margin-left: 70px;
+  }
+  .map-container {
+    height: 50%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .contact-header {
+    scale: 0.6;
+    margin-left: -70px;
+  }
+  input {
+    scale: 0.8;
+    margin-left: -20px;
+  }
+  .first-name-input {
+    margin-left: -10px;
+  }
+  textarea {
+    scale: 0.8;
+    margin-left: -20px;
+  }
+  .contact-us-submit-button {
+    scale: 0.6;
+    margin-left: -40px;
+  }
+  .map-box-outer {
+    width: 100%;
+    margin-left: 70px;
+  }
+  .map-container {
+    height: 50%;
+  }
+}

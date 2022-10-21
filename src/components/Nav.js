@@ -9,6 +9,8 @@ function Nav() {
 
   const [nav, setNav] = useState(false);
 
+  const [myNav, setMyNav] = useState(false);
+
   setTimeout(() => {
     setNav(true);
   }, 1600);
@@ -72,6 +74,41 @@ function Nav() {
               }
             ></div>
           </Link>
+          <div className="nav-lines-outer" onClick={() => setMyNav(!myNav)}>
+            <div className="nav-lines-inner">
+              <div className="navline"></div>
+              <div className="navline"></div>
+              <div className="navline"></div>
+            </div>
+            {myNav && (
+              <div className="dropdown">
+                <Link to="/" className="nav-home" onClick={handleLogoClick}>
+                  Home
+                </Link>
+                <Link
+                  to="/projects"
+                  className="nav-projects"
+                  onClick={handleLogoClick}
+                >
+                  Projects
+                </Link>
+                <Link
+                  to="/about"
+                  className="nav-about"
+                  onClick={handleLogoClick}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className="nav-contact"
+                  onClick={handleLogoClick}
+                >
+                  Contact
+                </Link>
+              </div>
+            )}
+          </div>
         </nav>
       </div>
     </>

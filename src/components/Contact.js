@@ -141,6 +141,7 @@ function Contact() {
 
                 <container className="contact-first-name">
                   <label>First Name</label>
+
                   <input
                     type="text"
                     name="first_name"

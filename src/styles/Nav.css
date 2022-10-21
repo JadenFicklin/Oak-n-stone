@@ -62,3 +62,72 @@
 .transparent {
   opacity: 0;
 }
+
+.nav-lines-outer {
+  width: 60px;
+  height: 80px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.nav-lines-outer:hover {
+  cursor: pointer;
+}
+.nav-lines-inner {
+  width: 50%;
+  height: 28%;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.navline {
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+}
+.dropdown {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  right: 0px;
+  top: 70px;
+}
+
+.nav-home,
+.nav-projects,
+.nav-about,
+.nav-contact {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  text-decoration: none;
+  color: #3a3a1f;
+}
+.nav-home:hover,
+.nav-projects:hover,
+.nav-about:hover,
+.nav-contact:hover {
+  background-color: rgb(228, 228, 228);
+}
+@media screen and (max-width: 1100px) {
+  .nav-sub {
+    opacity: 0;
+  }
+  .nav-lines-outer {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .nav-sub {
+    opacity: 1;
+  }
+  .nav-lines-outer {
+    opacity: 0;
+  }
+}

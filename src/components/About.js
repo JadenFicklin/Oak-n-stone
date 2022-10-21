@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "../styles/About.css";
 import ReactPlayer from "react-player";
 import vidOne from "../assets/videos/videoone.mp4";
+// import vidTwo from "../assets/videos/videotwo.mp4";
 
 function About() {
   const videoSrc = vidOne;
+  // const videoSrcTwo = vidTwo;
 
   const [topLine, setTopLine] = useState(false);
   const [bottomLine, setBottomLine] = useState(false);
@@ -26,15 +28,16 @@ function About() {
     <>
       <div className="about-outer">
         <div className="about-inner">
-          <ReactPlayer
-            url={videoSrc}
-            playing={true}
-            muted
-            loop={true}
-            width={"42%"}
-            height={"60%"}
-            className="about-video"
-          />
+          <div className="about-video">
+            <ReactPlayer
+              url={videoSrc}
+              playing={true}
+              muted
+              loop={true}
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
 
           <div className="about-header">
             We're an experienced team you can trust
