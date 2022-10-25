@@ -495,6 +495,48 @@ circle {
 .two-nav-contact:hover {
   background-color: #47472f;
 }
+@media screen and (max-width: 1300px) {
+  .project-right {
+    position: absolute;
+    width: 500px;
+    right: 0%;
+    margin-left: 0px;
+  }
+  svg {
+    left: 30%;
+    top: 100px;
+    margin-left: -460px;
+    scale: 0.7;
+  }
+  circle {
+    stroke-dasharray: 580;
+  }
+  .circle-one {
+    top: 340px;
+    margin-left: -90px;
+  }
+  .circle-two {
+    top: 420px;
+    margin-left: 50px;
+  }
+  .circle-three {
+    top: 590px;
+    margin-left: 50px;
+  }
+  .circle-four {
+    left: 30%;
+    top: 674px;
+    margin-left: -90px;
+  }
+  .circle-five {
+    top: 590px;
+    margin-left: -236px;
+  }
+  .circle-six {
+    top: 420px;
+    margin-left: -236px;
+  }
+}
 @media screen and (max-width: 1100px) {
   .nav-sub-two {
     opacity: 0;
@@ -509,5 +551,18 @@ circle {
   }
   .two-nav-lines-outer {
     opacity: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-left,
+  .project-wheel-outer,
+  .circle,
+  svg,
+  .bubble {
+    display: none;
+  }
+  .project-right {
+    width: 100%;
+    left: 0px;
   }
 }

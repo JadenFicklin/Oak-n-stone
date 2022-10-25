@@ -142,8 +142,6 @@ function App() {
             path="/"
             element={
               <>
-                {" "}
-                <Nav />
                 <Landing />
                 <SelectedWorks />
                 <ProjectOne />

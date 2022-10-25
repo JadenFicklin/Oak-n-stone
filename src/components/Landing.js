@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../styles/Landing.css";
 import AnimatedHeading from "./AnimatedHeading";
+import { Link } from "react-router-dom";
+import "../styles/Landing.css";
 
 function Landing() {
   const [thirtyone, setThirtyone] = useState(false);
@@ -21,6 +22,26 @@ function Landing() {
   const [fourtyone, setFourtyone] = useState(false);
   const [fourtytwo, setFourtytwo] = useState(false);
   const [fourtythree, setFourtythree] = useState(false);
+
+  const [projects, setProjects] = useState(false);
+  const [about, setAbout] = useState(false);
+  const [contact, setContact] = useState(false);
+
+  const [nav, setNav] = useState(false);
+
+  const [myNav, setMyNav] = useState(false);
+
+  setTimeout(() => {
+    setNav(true);
+  }, 1600);
+
+  const changeScroll = (position) => {
+    window.scrollTo(0, position);
+  };
+
+  const handleLogoClick = () => {
+    changeScroll(0);
+  };
 
   // sub landing fade in
   setTimeout(() => {
@@ -70,6 +91,109 @@ function Landing() {
 
   return (
     <>
+      <div
+        className={nav ? "landing-nav-outer" : "landing-nav-outer transparent"}
+      >
+        <nav className="landing-nav-inner">
+          <Link to="/" className="landing-nav-logo">
+            <img
+              src={require("../assets/logos/logo.JPG")}
+              alt="logo"
+              className="landing-nav-logo-inner"
+              onClick={handleLogoClick}
+            />
+          </Link>
+          <Link
+            to="/projects"
+            className="landing-nav-sub"
+            onMouseEnter={() => setProjects(true)}
+            onMouseLeave={() => setProjects(false)}
+            onClick={handleLogoClick}
+          >
+            PROJECTS
+            <div
+              className={
+                projects
+                  ? "landing-nav-line-hover-true"
+                  : "landing-nav-line-hover-false"
+              }
+            ></div>
+          </Link>
+
+          <Link
+            to="/about"
+            className="landing-nav-sub"
+            onMouseEnter={() => setAbout(true)}
+            onMouseLeave={() => setAbout(false)}
+          >
+            ABOUT
+            <div
+              className={
+                about
+                  ? "landing-nav-line-hover-true"
+                  : "landing-nav-line-hover-false"
+              }
+            ></div>
+          </Link>
+          <Link
+            to="/contact"
+            className="landing-nav-sub"
+            onMouseEnter={() => setContact(true)}
+            onMouseLeave={() => setContact(false)}
+          >
+            CONTACT
+            <div
+              className={
+                contact
+                  ? "landing-nav-line-hover-true"
+                  : "landing-nav-line-hover-false"
+              }
+            ></div>
+          </Link>
+          <div
+            className="landing-nav-lines-outer"
+            onClick={() => setMyNav(!myNav)}
+          >
+            <div className="landing-nav-lines-inner">
+              <div className="landing-navline"></div>
+              <div className="landing-navline"></div>
+              <div className="landing-navline"></div>
+            </div>
+            {myNav && (
+              <div className="landing-dropdown">
+                <Link
+                  to="/"
+                  className="landing-nav-home"
+                  onClick={handleLogoClick}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/projects"
+                  className="landing-nav-projects"
+                  onClick={handleLogoClick}
+                >
+                  Projects
+                </Link>
+                <Link
+                  to="/about"
+                  className="landing-nav-about"
+                  onClick={handleLogoClick}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className="landing-nav-contact"
+                  onClick={handleLogoClick}
+                >
+                  Contact
+                </Link>
+              </div>
+            )}
+          </div>
+        </nav>
+      </div>
       <div className="landing-outer">
         <div className="landing-top">
           <div className="landing-top-inner">
