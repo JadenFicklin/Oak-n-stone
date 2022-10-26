@@ -76,7 +76,7 @@
 }
 .project-one-right-inner {
   width: 310%;
-  height: 750px;
+  height: 95%;
   margin: 20px 0px 20px 20px;
   position: absolute;
   left: 0%;
@@ -268,4 +268,10 @@
 }
 .right-button-hovered {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 850px) {
+  .project-one-outer {
+    display: none;
+  }
 }
