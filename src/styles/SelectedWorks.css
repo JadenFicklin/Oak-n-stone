@@ -61,3 +61,51 @@
 .selected-works-button:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+  .selected-works-outer {
+    height: 50vh;
+  }
+  .selected-works-left {
+    width: 100%;
+    height: 20vh;
+  }
+  .selected-works-right {
+    height: 20vh;
+    width: 60%;
+  }
+  .selected-works-right-top {
+    width: 100%;
+    height: 40%;
+    margin-left: 60px;
+  }
+  .selected-works-button {
+    margin-left: 60px;
+    margin-top: 80px;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 280px) {
+  .selected-works-outer {
+    height: 70vh;
+  }
+  .selected-works-left {
+    width: 100%;
+    height: 20vh;
+    scale: 0.6;
+    margin-left: -40px;
+  }
+  .selected-works-right {
+    height: 20vh;
+    width: 60%;
+  }
+  .selected-works-right-top {
+    width: 100%;
+    height: 40%;
+    margin-left: 60px;
+  }
+  .selected-works-button {
+    margin-left: 60px;
+    margin-top: 140px;
+  }
+}
