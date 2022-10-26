@@ -330,7 +330,7 @@
   }
 
   .landing-top-inner {
-    scale: 0.8;
+    scale: 1;
     background-color: white;
     width: 5%;
     padding-left: 0px;
@@ -352,28 +352,25 @@
 }
 @media screen and (max-width: 1900px) {
   .landing-top-inner {
-    scale: 0.7;
+    scale: 0.9;
   }
 }
 @media screen and (max-width: 1650px) {
   .landing-top-inner {
-    scale: 0.6;
+    scale: 0.8;
   }
 }
 @media screen and (max-width: 1450px) {
   .landing-top-inner {
-    scale: 0.5;
+    scale: 0.6;
   }
   .landing-top {
     align-items: center;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .landing-top-inner {
-    scale: 0.4;
-  }
-  .landing-top {
-    align-items: flex-start;
+    scale: 0.5;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -390,5 +387,35 @@
   }
   .landing-nav-lines-outer {
     opacity: 0;
+  }
+}
+@media screen and (max-width: 950px) {
+  .landing-top-inner {
+    scale: 0.4;
+  }
+}
+@media screen and (max-width: 750px) {
+  .landing-top-inner {
+    scale: 0.3;
+  }
+}
+@media screen and (max-width: 550px) {
+  .landing-top-inner {
+    scale: 0.25;
+  }
+}
+@media screen and (max-width: 414px) {
+  .landing-top-inner {
+    scale: 0.2;
+  }
+}
+@media screen and (max-width: 412px) {
+  .landing-top-inner {
+    scale: 0.16;
+  }
+}
+@media screen and (max-width: 280px) {
+  .landing-top-inner {
+    scale: 0.15;
   }
 }
