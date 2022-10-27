@@ -135,11 +135,14 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(202, 202, 202);
-  transition: 1.8s;
+  transition: 0.3s;
+  color: #3a3a1f;
+  text-decoration: none;
 }
 .about-contact-button:hover {
   cursor: pointer;
-  background-color: rgb(202, 202, 202);
+  background-color: #3a3a1f;
+  color: white;
 }
 
 .about-inner-top-line,

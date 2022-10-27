@@ -338,11 +338,12 @@ function Projects() {
               install them yourself, give us a call.
             </div> */}
               <br></br>
-              <div
+              <Link
+                to="/contact"
                 className={!two ? "s-head pictures" : "s-head pictures false"}
               >
                 Contact us
-              </div>
+              </Link>
             </div>
           </div>
           <div className={!two ? "row row-two" : "row row-two falsey"}>

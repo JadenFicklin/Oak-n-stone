@@ -3,6 +3,7 @@ import "../styles/About.css";
 import ReactPlayer from "react-player";
 import vidOne from "../assets/videos/videoone.mp4";
 import vidTwo from "../assets/videos/videotwo.mp4";
+import { Link } from "react-router-dom";
 
 function About() {
   const videoSrc = vidOne;
@@ -69,7 +70,8 @@ function About() {
           >
             We're an experienced team you can trust
           </div>
-          <div
+          <Link
+            to="/contact"
             className={
               fadeInFive
                 ? "about-contact-button"
@@ -77,7 +79,7 @@ function About() {
             }
           >
             CONTACT
-          </div>
+          </Link>
           <div
             className={fadeInThree ? "about-left" : "about-left opacity-zero"}
           >

@@ -215,7 +215,8 @@ function Landing() {
               </div>
             </div>
             <div className="landing-bottom-left-bottom">
-              <div
+              <Link
+                to="/contact"
                 className={
                   thirtyfour
                     ? "landing-bottom-left-bottom-inner"
@@ -232,7 +233,7 @@ function Landing() {
                 <div
                   className={button ? "button-hover" : "button-hover-false"}
                 ></div>
-              </div>
+              </Link>
             </div>
           </div>
           <div

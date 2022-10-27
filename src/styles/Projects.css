@@ -156,6 +156,8 @@ circle {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  color: #cfcfb0;
+  text-decoration: none;
 }
 .pictures:hover {
   color: #3a3a1f;
