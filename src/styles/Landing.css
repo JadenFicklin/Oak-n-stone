@@ -438,7 +438,8 @@
 }
 @media screen and (max-width: 412px) {
   .landing-top-inner {
-    scale: 0.16;
+    scale: 0.2;
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 280px) {
