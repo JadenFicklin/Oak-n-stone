@@ -85,6 +85,11 @@
     transition: 0.3s;
   }
 }
+@media screen and (max-width: 500px) {
+  .selected-works-left-inner {
+    scale: 0.6;
+  }
+}
 @media screen and (max-width: 280px) {
   .selected-works-outer {
     height: 70vh;
@@ -95,6 +100,7 @@
     scale: 0.6;
     margin-left: -40px;
   }
+
   .selected-works-right {
     height: 20vh;
     width: 60%;
