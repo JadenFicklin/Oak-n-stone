@@ -1,17 +1,12 @@
-import React, { useState, useRef, useMemo } from "react";
-import "../styles/Contacts.css";
-import emailjs from "@emailjs/browser";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import React, { useState, useRef } from 'react';
+import '../styles/Contacts.css';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_MAP_API_KEY,
-  });
-
   const {
     REACT_APP_EMAIL_SERVICE_ID,
     REACT_APP_EMAIL_TEMPLATE_ID,
-    REACT_APP_EMAIL_PUBLIC_KEY,
+    REACT_APP_EMAIL_PUBLIC_KEY
   } = process.env;
 
   const [topLine, setTopLine] = useState(false);
@@ -22,14 +17,12 @@ function Contact() {
   const [lineThree, setLineThree] = useState(false);
   const [lineFour, setLineFour] = useState(false);
 
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
 
   const [contactUs, setContactUs] = useState(false);
 
   const [mapTrue, setMapTrue] = useState(false);
   const [infoBox, setInfoBox] = useState(false);
-
-  const center = useMemo(() => ({ lat: 41.7119, lng: -112.1655 }), []);
 
   // phone number formating
   const handleInput = (e) => {
@@ -39,7 +32,7 @@ function Contact() {
 
   function formatPhoneNumber(value) {
     if (!value) return value;
-    const phoneNumber = value.replace(/[^\d]/g, "");
+    const phoneNumber = value.replace(/[^\d]/g, '');
     const phoneNumberLength = phoneNumber.length;
     if (phoneNumberLength < 4) return phoneNumber;
     if (phoneNumberLength < 7) {
@@ -96,7 +89,7 @@ function Contact() {
         (result) => {
           console.log(result.text);
           e.target.reset();
-          setInputValue("");
+          setInputValue('');
         },
         (error) => {
           console.log(error.text);
@@ -111,17 +104,15 @@ function Contact() {
         <div
           className={
             topLine
-              ? "contact-inner-top-line"
-              : "contact-inner-top-line false-line"
-          }
-        ></div>
+              ? 'contact-inner-top-line'
+              : 'contact-inner-top-line false-line'
+          }></div>
         <div
           className={
             bottomLine
-              ? "contact-inner-bottom-line"
-              : "contact-inner-bottom-line false-line"
-          }
-        ></div>
+              ? 'contact-inner-bottom-line'
+              : 'contact-inner-bottom-line false-line'
+          }></div>
         <div className="contact-inner-box">
           {/* left box */}
           <div className="contact-inner-box-left">
@@ -131,9 +122,8 @@ function Contact() {
                 ref={form}
                 onSubmit={sendEmail}
                 className={
-                  contactUs ? "form-outer" : "form-outer contact-false"
-                }
-              >
+                  contactUs ? 'form-outer' : 'form-outer contact-false'
+                }>
                 <container className="contact-us-header">
                   <h1 className="contact-header">Contact us</h1>
                 </container>
@@ -196,50 +186,40 @@ function Contact() {
             <div
               className={
                 lineOne
-                  ? "contact-inner-box-left-line-one"
-                  : "contact-inner-box-left-line-one virticle-line-false"
-              }
-            ></div>
+                  ? 'contact-inner-box-left-line-one'
+                  : 'contact-inner-box-left-line-one virticle-line-false'
+              }></div>
             <div
               className={
                 lineTwo
-                  ? "contact-inner-box-left-line-two"
-                  : "contact-inner-box-left-line-two virticle-line-false"
-              }
-            ></div>
+                  ? 'contact-inner-box-left-line-two'
+                  : 'contact-inner-box-left-line-two virticle-line-false'
+              }></div>
           </div>
 
           {/* right box */}
           <div className="contact-inner-box-right">
             {/* map box */}
             <div
-              className={mapTrue ? "map-box-outer" : "map-box-outer map-false"}
-            >
-              {!isLoaded ? (
+              className={mapTrue ? 'map-box-outer' : 'map-box-outer map-false'}>
+              {/* {!isLoaded ? (
                 <div>Loading...</div>
-              ) : (
-                <>
-                  <div className="where-we-work-outer">
-                    <div className="where-we-work-text-header">
-                      WHERE WE WORK
-                    </div>
-                    <div className="where-we-work-text-sub-header">
-                      We work in the greater Wasatch
-                    </div>
-                    <div className="where-we-work-text-sub-header">
-                      Front, From Logan to Lehi.
-                    </div>
+              ) : ( */}
+              <>
+                <div className="where-we-work-outer">
+                  <div className="where-we-work-text-header">WHERE WE WORK</div>
+                  <div className="where-we-work-text-sub-header">
+                    We work in the greater Wasatch
                   </div>
-
-                  <GoogleMap
-                    zoom={8.2}
-                    center={center}
-                    mapContainerClassName="map-container"
-                  >
-                    <Marker position={center} />
-                  </GoogleMap>
-                </>
-              )}
+                  <div className="where-we-work-text-sub-header">
+                    Front, From Logan to Lehi.
+                  </div>
+                </div>
+                <div className="map-container">
+                  <div className="tremonton-map" />
+                </div>
+              </>
+              {/* )} */}
             </div>
 
             {/* info box */}
@@ -247,15 +227,13 @@ function Contact() {
               <div
                 className={
                   infoBox
-                    ? "contact-info-box-inner"
-                    : "contact-info-box-inner info-box-false"
-                }
-              >
+                    ? 'contact-info-box-inner'
+                    : 'contact-info-box-inner info-box-false'
+                }>
                 <div className="contact-info-header wide">CONTACT</div>
                 <a
                   className="contact-info-email wide"
-                  href="mailto:oakandstonecabinets@gmail.com"
-                >
+                  href="mailto:oakandstonecabinets@gmail.com">
                   oakandstonecabinets@gmail.com
                 </a>
                 <div className="contact-info-number-one wide">
@@ -268,18 +246,16 @@ function Contact() {
               <div
                 className={
                   lineFour
-                    ? "line-above-contact-info"
-                    : "line-above-contact-info horizontal-line-false"
-                }
-              ></div>
+                    ? 'line-above-contact-info'
+                    : 'line-above-contact-info horizontal-line-false'
+                }></div>
             </div>
             <div
               className={
                 lineThree
-                  ? "contact-inner-box-left-line-three"
-                  : "contact-inner-box-left-line-three virticle-line-false"
-              }
-            ></div>
+                  ? 'contact-inner-box-left-line-three'
+                  : 'contact-inner-box-left-line-three virticle-line-false'
+              }></div>
           </div>
         </div>
       </div>
